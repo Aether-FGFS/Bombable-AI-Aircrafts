@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<PropertyList include="f16-bombableinclude.xml">
+    <path>f-16_lowpoly.ac</path>
+    <texture-path>AI/Aircraft/f16/Models</texture-path>
+    <animation>
+        <type>select</type>
+        <object-name>landing-gear</object-name>
+        <condition>
+            <greater-than>
+                <property>gear/gear[0]/position-norm</property>
+                <value>0.2</value>
+            </greater-than>
+        </condition>
+    </animation>
+</PropertyList>

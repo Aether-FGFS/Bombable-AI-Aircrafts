@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<PropertyList include="Models/f-16.xml">
+		<model>
+			<path>AI/Aircraft/f16/Models/f-16.xml</path>
+                </model>
+</PropertyList>
