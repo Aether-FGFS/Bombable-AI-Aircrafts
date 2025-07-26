@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <scenario>
+   <description>MiG-21bis Training scenario.  Starts at KSFO! </description>
+		
+   <entry>
+     <type>aircraft</type>
+     <callsign>Kolonka</callsign>
+     <name>MiG-21bis Leader</name>
+     <model type="string">Aircraft/MiG-21bis/Models/MiG-21bis.xml</model>
+     <latitude type="double">37.608720</latitude>
+     <longitude type="double">-122.3076</longitude>
+     <altitude type="double">309</altitude>
+     <speed>280.0</speed>
+     <heading type="double">192</heading>
+   </entry>
+    
+   <entry>
+     <type>aircraft</type>
+     <callsign>Arim</callsign>
+     <name>MiG-21bis Wingman</name>
+     <model type="string">Aircraft/MiG-21bis/Models/MiG-21bis.xml</model>
+     <latitude type="double">37.608200</latitude>
+     <longitude type="double">-122.2988</longitude>
+     <altitude type="double">309</altitude>
+     <speed>270.0</speed>
+     <heading type="double">192</heading>
+   </entry>
+ </scenario>
+
+</PropertyList>
+

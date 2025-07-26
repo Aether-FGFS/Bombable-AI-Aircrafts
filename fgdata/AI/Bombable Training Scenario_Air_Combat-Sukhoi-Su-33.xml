@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <scenario>
+   <description>Sukhoi-Su-33 Training scenario.  Starts at KSFO! </description>
+		
+   <entry>
+     <type>aircraft</type>
+     <callsign>Shapka</callsign>
+     <name>Su-33 Leader</name>
+     <model type="string">Aircraft/Sukhoi-Su-33/Models/su33.xml</model>
+     <latitude type="double">37.608720</latitude>
+     <longitude type="double">-122.3076</longitude>
+     <altitude type="double">309</altitude>
+     <speed>280.0</speed>
+     <heading type="double">192</heading>
+   </entry>
+    
+   <entry>
+     <type>aircraft</type>
+     <callsign>Butylene</callsign>
+     <name>Su-33 Wingman</name>
+     <model type="string">Aircraft/Sukhoi-Su-33/Models/su33.xml</model>
+     <latitude type="double">37.608200</latitude>
+     <longitude type="double">-122.2988</longitude>
+     <altitude type="double">309</altitude>
+     <speed>270.0</speed>
+     <heading type="double">192</heading>
+   </entry>
+ </scenario>
+
+</PropertyList>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <scenario>
+   <description>MiG-15bis Training scenario.  Starts at KSFO! </description>
+		
+   <entry>
+     <type>aircraft</type>
+     <callsign>Rocket</callsign>
+     <name>MiG-15bis Leader</name>
+     <model type="string">Aircraft/MiG-15bis/Models/MiG-15bis.xml</model>
+     <latitude type="double">37.608720</latitude>
+     <longitude type="double">-122.3076</longitude>
+     <altitude type="double">509</altitude>
+     <speed>280.0</speed>
+     <heading type="double">192</heading>
+   </entry>
+    
+   <entry>
+     <type>aircraft</type>
+     <callsign>Elvis</callsign>
+     <name>MiG-15bis Wingman</name>
+     <model type="string">Aircraft/MiG-15bis/Models/MiG-15bis.xml</model>
+     <latitude type="double">37.608200</latitude>
+     <longitude type="double">-122.2988</longitude>
+     <altitude type="double">509</altitude>
+     <speed>270.0</speed>
+     <heading type="double">192</heading>
+   </entry>
+ </scenario>
+
+</PropertyList>
+

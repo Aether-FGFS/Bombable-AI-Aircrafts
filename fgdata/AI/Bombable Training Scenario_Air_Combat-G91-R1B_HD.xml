@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <scenario>
+   <description>G91-R1B_HD Training scenario.  Starts at KSFO! </description>
+		
+   <entry>
+     <type>aircraft</type>
+     <callsign>Pedro</callsign>
+     <name>G91-R1B_HD Leader</name>
+     <model type="string">Aircraft/G91-R1B_HD/Models/G91-R1B_HD.xml</model>
+     <latitude type="double">37.608720</latitude>
+     <longitude type="double">-122.3076</longitude>
+     <altitude type="double">309</altitude>
+     <speed>280.0</speed>
+     <heading type="double">192</heading>
+   </entry>
+    
+   <entry>
+     <type>aircraft</type>
+     <callsign>Bandit</callsign>
+     <name>G91-R1B_HD Wingman</name>
+     <model type="string">Aircraft/G91-R1B_HD/Models/G91-R1B_HD.xml</model>
+     <latitude type="double">37.608200</latitude>
+     <longitude type="double">-122.2988</longitude>
+     <altitude type="double">309</altitude>
+     <speed>270.0</speed>
+     <heading type="double">192</heading>
+   </entry>
+ </scenario>
+
+</PropertyList>
+
