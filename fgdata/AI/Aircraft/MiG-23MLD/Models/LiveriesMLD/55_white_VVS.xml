@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+    <sim>
+        <model>
+            <livery>
+                <name type="string">VVS 55 White (Afghanistan)</name>
+                <texture>LiveriesMLD/55_white_VVS.png</texture>
+            </livery>
+            <pilotsuit>
+                <name type="string">CamoFlightsuit</name>
+                <texture>pilot_camo.png</texture>
+            </pilotsuit>
+        </model>
+    </sim>
+    <fdm>
+        <jsbsim>
+            <fcs>
+                <dogtooth type="bool">0</dogtooth>
+                <vortex-generator type="bool">0</vortex-generator>
+                <cfd type="bool">0</cfd>
+            </fcs>
+        </jsbsim>
+    </fdm>
+</PropertyList>
