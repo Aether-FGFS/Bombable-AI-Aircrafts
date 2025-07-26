@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<!-- F35A model config file -->
+<!-- Tiger 2025 -->
+
+<PropertyList include="F-35A-bombableinclude.xml">
+
+        <description>F-35A</description>
+
+
+	<path>AI/Aircraft/F-35A/Models/F-35A.ac</path>
+        <texture-path>AI/Aircraft/F-35A/Textures</texture-path>
+
+        <animation>
+        <type>select</type>
+        <object-name>gear</object-name>
+        <condition>
+            <greater-than>
+                <property>gear/gear[0]/position-norm</property>
+                <value>0.2</value>
+            </greater-than>
+        </condition>
+        </animation>
+
+
+	<!-- Select the external loads as appropriate -->
+	<!-- Select extermal tanks -->
+	
+	
+	
+		
+
+</PropertyList>

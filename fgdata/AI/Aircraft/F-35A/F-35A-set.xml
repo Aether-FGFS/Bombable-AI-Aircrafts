@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<PropertyList include="Models/F-35A.xml">
+		<model>
+			<path>AI/Aircraft/F-35A/Models/F-35A-model.xml</path>
+    </model>
+</PropertyList>
