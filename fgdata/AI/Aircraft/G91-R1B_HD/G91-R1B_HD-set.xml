@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<PropertyList include="Models/G91-R1B_HD.xml">
+		<model>
+			<path>AI/Aircraft/G91-R1B_HD/Models/G91-R1B_HD.xml</path>
+    </model>
+</PropertyList>

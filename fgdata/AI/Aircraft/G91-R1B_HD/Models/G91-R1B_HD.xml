@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!-- G91-R1B_HD model config file -->
+<!-- Aether 2025 -->
+
+<PropertyList include="G91-R1B_HD-bombableinclude.xml">
+
+        <description>G91-R1B_HD</description>
+
+
+	<path>AI/Aircraft/G91-R1B_HD/Models/g91ai.ac</path>
+    <texture-path>AI/Aircraft/G91-R1B_HD/Models</texture-path>
+
+
+	<!-- Select the external loads as appropriate -->
+	<!-- Select extermal tanks -->
+	
+	
+	
+		
+
+</PropertyList>
