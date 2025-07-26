@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<!-- MiG-15bis model config file -->
+<!-- Aether 2025 -->
+
+<PropertyList include="MiG-15bis-bombableinclude.xml">
+
+        <description>MiG-15bis</description>
+
+
+	<path>AI/Aircraft/MiG-15bis/Models/MiG-15bis.ac</path>
+        <texture-path>AI/Aircraft/MiG-15bis/Models</texture-path>
+
+        <animation>
+        <type>select</type>
+        <object-name>gear</object-name>
+          <condition>
+            <greater-than>
+                <property>gear/gear[0]/position-norm</property>
+                <value>0.2</value>
+            </greater-than>
+          </condition>
+        </animation>
+
+
+
+	<!-- Select the external loads as appropriate -->
+	<!-- Select extermal tanks -->
+	
+	
+	
+		
+
+</PropertyList>
