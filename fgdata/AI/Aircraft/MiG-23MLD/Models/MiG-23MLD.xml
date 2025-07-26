@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList include="MiG-23-bombableinclude.xml">
+    <model>
+        <name>model</name>
+        <path>Aircraft/MiG-23MLD/Models/MiG-23.xml</path>
+    </model>
+    <model>
+        <name>cockpit</name>
+        <path>Aircraft/MiG-23MLD/Models/CockpitMLD.xml</path>
+        <offsets>
+            <pitch-deg>-3</pitch-deg>
+        </offsets>
+    </model>
+</PropertyList>
