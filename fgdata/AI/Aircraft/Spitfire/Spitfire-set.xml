@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/spitfire_model.xml">
+
+  <model>
+    <path>AI/Aircraft/Spitfire/Models/spitfire_model.xml</path>
+  </model>
+
+  <animation>
+        <type>select</type>
+        <object-name>gear</object-name>
+        <condition>
+            <greater-than>
+                <property>gear/gear[0]/position-norm</property>
+                <value>0.2</value>
+            </greater-than>
+        </condition>
+  </animation>
+
+
+</PropertyList>
