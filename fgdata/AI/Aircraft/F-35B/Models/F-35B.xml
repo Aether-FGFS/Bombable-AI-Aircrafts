@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<!-- F35B model config file -->
+<!-- Aether 2025 -->
+
+<PropertyList include="F-35B-bombableinclude.xml">
+
+        <description>F-35B</description>
+
+
+	<path>Aircraft/F-35B/Models/F-35B.ac</path>
+        <texture-path>Aircraft/F-35B/Textures</texture-path>
+        
+        <animation>
+        <type>select</type>
+        <object-name>gear</object-name>
+        <condition>
+            <greater-than>
+                <property>gear/gear[0]/position-norm</property>
+                <value>0.2</value>
+            </greater-than>
+        </condition>
+        </animation>
+    
+
+
+	<!-- Select the external loads as appropriate -->
+	<!-- Select extermal tanks -->
+	
+	
+	
+		
+
+</PropertyList>
