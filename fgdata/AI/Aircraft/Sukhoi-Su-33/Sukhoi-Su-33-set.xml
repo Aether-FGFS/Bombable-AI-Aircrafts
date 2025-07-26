@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/su33.xml">
+
+  <model>
+    <path>AI/Aircraft/Sukhoi-Su-33/Models/su33.xml</path>
+  </model>
+
+</PropertyList>
