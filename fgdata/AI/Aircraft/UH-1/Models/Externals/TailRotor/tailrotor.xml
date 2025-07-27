@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>tailrotor.ac</path>
+
+  <animation>
+    <object-name>rotortail</object-name>
+    <object-name>rotortail1</object-name>
+    <object-name>rotortail2</object-name>
+  </animation>
+
+  <!-- Blades -->
+  <model>
+    <name>Blade1</name>
+    <path>blade.xml</path>
+  </model>
+
+  <model>
+    <name>Blade2</name>
+    <path>blade.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>rotorcomplet</name>
+    <object-name>rotortail</object-name>
+    <object-name>rotortail2</object-name>
+    <object-name>Blade1</object-name>
+    <object-name>Blade2</object-name>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>rotorcomplet</object-name>
+    <property>velocities/true-airspeed-kt</property>
+    <factor> 100 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

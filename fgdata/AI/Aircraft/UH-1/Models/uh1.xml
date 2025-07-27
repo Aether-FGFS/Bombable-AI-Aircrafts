@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="UH-1-bombableinclude.xml">
+
+  <path>uh1.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>uh1</object-name>
+
+    <object-name>mainrotor</object-name>
+    <object-name>tailrotor</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>uh1</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+
+  <effect>
+    <inherits-from>AI/Aircraft/UH-1/Models/Effects/Bump/bumpspec</inherits-from>
+    <object-name>uh1</object-name>
+  </effect>
+
+  <model>
+    <path>Externals/MainRotor/all-mainrotor.xml</path>
+  </model>
+
+  <model>
+    <path>Externals/TailRotor/all-tailrotor.xml</path>
+  </model>
+
+  <model>
+    <path>Effects/3D/all-guns.xml</path>
+  </model>
+
+</PropertyList>
