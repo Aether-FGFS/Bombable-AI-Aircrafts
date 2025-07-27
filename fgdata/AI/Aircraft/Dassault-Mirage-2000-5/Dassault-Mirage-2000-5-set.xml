@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/mirage2k.xml">
+
+  <model>
+    <path>AI/Aircraft/Dassault-Mirage-2000-5/Models/mirage2k.xml</path>
+  </model>
+
+</PropertyList>
