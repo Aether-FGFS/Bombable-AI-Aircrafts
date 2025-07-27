@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>9M120.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>tube-outer</object-name>
+    <object-name>tube-inner</object-name>
+    <object-name>caps</object-name>
+    <object-name>caps.001</object-name>
+    <object-name>9M120-missile</object-name>
+
+    <!-- Transparence -->
+  </animation>
+
+  <effect>
+    <inherits-from>../ArmReflect</inherits-from>
+    <object-name>tube-outer</object-name>
+  </effect>
+
+</PropertyList>
