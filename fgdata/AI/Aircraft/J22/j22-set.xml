@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<PropertyList include="Models/j22.xml">
+		<model>
+			<path>AI/Aircraft/j22/Models/j22.xml</path>
+    </model>
+</PropertyList>

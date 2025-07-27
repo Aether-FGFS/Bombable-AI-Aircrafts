@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<!-- J2M model config file -->
+<!-- Aether 2025 -->
+
+<PropertyList include="J2M-bombableinclude.xml">
+
+        <description>J2M</description>
+
+
+	<path>AI/Aircraft/J2M/Models/J2M.ac</path>
+    <texture-path>AI/Aircraft/J2M/Models</texture-path>
+
+   <animation>
+        <type>select</type>
+        <object-name>gear</object-name>
+        <condition>
+            <greater-than>
+                <property>gear/gear[0]/position-norm</property>
+                <value>0.2</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+
+
+	<!-- Select the external loads as appropriate -->
+	<!-- Select extermal tanks -->
+	
+	
+	
+		
+
+</PropertyList>
