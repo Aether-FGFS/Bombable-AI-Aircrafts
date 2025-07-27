@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <scenario>
+
+    <description>J2M Training scenario.  Starts at KSFO! </description>
+
+    <entry>
+      <type>aircraft</type>
+      <callsign>Ivory</callsign>
+      <name>J2M Leader</name>
+      <model     type="string">Aircraft/J2M/Models/j2m.xml</model>
+      <latitude  type="double">37.608720</latitude>
+      <longitude type="double">-122.3076</longitude>
+      <altitude  type="double">3500</altitude>
+      <speed>180.0</speed>
+      <heading   type="double">192</heading>
+    </entry>
+
+    <entry>
+      <type>aircraft</type>
+      <callsign>Ocean Star</callsign>
+      <name>J2M Wingman</name>
+      <model     type="string">Aircraft/J2M/Models/j2m.xml</model>
+      <latitude  type="double">37.608200</latitude>
+      <longitude type="double">-122.2988</longitude>
+      <altitude  type="double">3500</altitude>
+      <speed>180.0</speed>
+      <heading   type="double">192</heading>
+    </entry>
+
+  </scenario>
+
+</PropertyList>
