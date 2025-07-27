@@ -3,7 +3,8 @@ ________________________________________________________________________________
 
 Installation: 
 
-To install this addon, copy and paste files from download into fgdata folder, following file structure.
+To install this addon, copy and paste files from download into fgdata folder, following file structure. 
+ Run AI Scenarios to use AI airplanes. 
 
 
 Always remember, that war is Disaster for regular people and soldiers. 
