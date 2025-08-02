@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <scenario>
+
+    <description>Fiat-G55 Training scenario.  Starts at KSFO! </description>
+
+    <entry>
+      <type>aircraft</type>
+      <callsign>Lucchini</callsign>
+      <name>Fiat-G55 Leader</name>
+      <model     type="string">Aircraft/Fiat-G55/Models/g55.xml</model>
+      <latitude  type="double">37.608720</latitude>
+      <longitude type="double">-122.3076</longitude>
+      <altitude  type="double">3500</altitude>
+      <speed>180.0</speed>
+      <heading   type="double">192</heading>
+    </entry>
+
+    <entry>
+      <type>aircraft</type>
+      <callsign>Martinoli</callsign>
+      <name>Fiat-G55 Wingman</name>
+      <model     type="string">Aircraft/Fiat-G55/Models/g55.xml</model>
+      <latitude  type="double">37.608200</latitude>
+      <longitude type="double">-122.2988</longitude>
+      <altitude  type="double">3500</altitude>
+      <speed>180.0</speed>
+      <heading   type="double">192</heading>
+    </entry>
+
+  </scenario>
+
+</PropertyList>

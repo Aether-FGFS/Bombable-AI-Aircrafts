@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <scenario>
+   <description>JA-37 Training scenario.  Starts at KSFO! </description>
+		
+   <entry>
+     <type>aircraft</type>
+     <callsign>Johansson</callsign>
+     <name>JA-37 Leader</name>
+     <model type="string">Aircraft/JA37/Models/JA-37.xml</model>
+     <latitude type="double">37.608720</latitude>
+     <longitude type="double">-122.3076</longitude>
+     <altitude type="double">309</altitude>
+     <speed>280.0</speed>
+     <heading type="double">192</heading>
+   </entry>
+    
+   <entry>
+     <type>aircraft</type>
+     <callsign>Eldh</callsign>
+     <name>JA-37 Wingman</name>
+     <model type="string">Aircraft/JA37/Models/JA-37.xml</model>
+     <latitude type="double">37.608200</latitude>
+     <longitude type="double">-122.2988</longitude>
+     <altitude type="double">309</altitude>
+     <speed>270.0</speed>
+     <heading type="double">192</heading>
+   </entry>
+ </scenario>
+
+</PropertyList>
+
