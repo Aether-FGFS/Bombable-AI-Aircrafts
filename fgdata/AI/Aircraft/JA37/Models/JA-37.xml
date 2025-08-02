@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<PropertyList>
+<PropertyList include="JA-37-bombableinclude.xml">
     <path>JA-37-lowpoly.ac</path>
 
     <!-- Fuselage animations -->
