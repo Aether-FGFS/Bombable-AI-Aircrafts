@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Chaque pales est formée de 4 parties
+
+       Axe 0               Axe 1               Axe 2               Axe 3
+         +______blade1_______+_______blade2______+______blade3_______+_____blade4________
+      center
+        of
+       rotor
+
+  -->
+  <path>blade.ac</path>
+
+  <animation>
+    <object-name>blade1</object-name>
+    <object-name>blade2</object-name>
+    <object-name>blade3</object-name>
+    <object-name>blade4</object-name>
+    <object-name>attache</object-name>
+    <object-name>attache2</object-name>
+    <object-name>attache3</object-name>
+    <object-name>attache4</object-name>
+    <object-name>bielle1</object-name>
+    <object-name>bielle2</object-name>
+
+    <!-- Transparence -->
+    <object-name>propblur1</object-name>
+    <object-name>propblur2</object-name>
+    <object-name>propblur3</object-name>
+    <object-name>propblur4</object-name>
+    <object-name>propdisc1</object-name>
+    <object-name>propdisc2</object-name>
+    <object-name>propdisc3</object-name>
+    <object-name>propdisc4</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>propblur1</object-name>
+    <object-name>propblur2</object-name>
+    <object-name>propblur3</object-name>
+    <object-name>propblur4</object-name>
+    <object-name>propdisc1</object-name>
+    <object-name>propdisc2</object-name>
+    <object-name>propdisc3</object-name>
+    <object-name>propdisc4</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propblur1</object-name>
+    <object-name>propblur2</object-name>
+    <object-name>propblur3</object-name>
+    <object-name>propblur4</object-name>
+    <object-name>propdisc1</object-name>
+    <object-name>propdisc2</object-name>
+    <object-name>propdisc3</object-name>
+    <object-name>propdisc4</object-name>
+  </effect>
+
+  <!-- Sélection blade/blur/disc main rotor-->
+  <animation>
+    <name>DiscComplet</name>
+    <object-name>propdisc1</object-name>
+    <object-name>propdisc2</object-name>
+    <object-name>propdisc3</object-name>
+    <object-name>propdisc4</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>DiscComplet</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>14</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <name>BlurComplet</name>
+    <object-name>propblur1</object-name>
+    <object-name>propblur2</object-name>
+    <object-name>propblur3</object-name>
+    <object-name>propblur4</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>BlurComplet</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>60</value>
+        </greater-than>
+        <less-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>101</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+
+</PropertyList>
