@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="JAS39-Gripen-bombableinclude.xml">
+
+  <path>gripen.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>gripen</object-name>
+    <object-name>portesfermees</object-name>
+    <object-name>portesouvertes</object-name>
+    <object-name>bombes</object-name>
+
+    <object-name>exhaust</object-name>
+    <object-name>rouessorties</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>gripen</object-name>
+    <object-name>portesfermees</object-name>
+    <object-name>portesouvertes</object-name>
+    <object-name>bombes</object-name>
+    <object-name>rouessorties</object-name>
+    <object-name>exhaust</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+
+  <effect>
+    <inherits-from>AI/Aircraft/JAS39-Gripen/Models/Effects/Bump/bumpspec</inherits-from>
+    <object-name>gripen</object-name>
+    <object-name>portesfermees</object-name>
+    <object-name>portesouvertes</object-name>
+    <object-name>bombes</object-name>
+  </effect>
+
+  <!-- Roues sorties -->
+  <animation>
+    <type>select</type>
+    <object-name>rouessorties</object-name>
+    <object-name>portesouvertes</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>60</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <!-- Roues rentrée -->
+  <animation>
+    <type>select</type>
+    <object-name>portesfermees</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>59</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+</PropertyList>
