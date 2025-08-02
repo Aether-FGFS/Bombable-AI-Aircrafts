@@ -31,7 +31,7 @@
           },
           velocities : {
             maxSpeedReduce_percent                       : 0.5,
-            minSpeed_kt                                  : 1,
+            minSpeed_kt                                  : 0,
             cruiseSpeed_kt                               : 100,
             attackSpeed_kt                               : 90,
             maxSpeed_kt                                  : 120,
