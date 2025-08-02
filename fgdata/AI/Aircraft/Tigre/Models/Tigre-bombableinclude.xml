@@ -88,7 +88,7 @@
             maxSpeedReduce_percent                       : 0.5,
 
             # minimum speed to reduce to when damaged.  Ground vehicles and ships might stop completely when damaged but aircraft will need a minimum speed so they keep moving until they hit the ground.
-            minSpeed_kt                                  : 1,
+            minSpeed_kt                                  : 0,
 
             # cruising speed, typical/optimal cruising speed, V C for aircraft
             cruiseSpeed_kt                               : 110,
