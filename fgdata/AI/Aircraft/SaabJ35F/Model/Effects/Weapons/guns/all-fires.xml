@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left top -->
+  <model>
+    <path>fire.xml</path>
+    <condition>
+      <!-- <property>controls/armament/trigger</property> -->
+      <property>sim/multiplay/generic/int[10]</property>
+    </condition>
+    <offsets>
+      <x-m> -5.97414 </x-m>
+      <y-m> -0.11000 </y-m>
+      <z-m>  0.53088 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!--Right top -->
+  <model>
+    <path>fire.xml</path>
+    <condition>
+      <!-- <property>controls/armament/trigger</property> -->
+      <property>sim/multiplay/generic/int[10]</property>
+    </condition>
+    <offsets>
+      <x-m> -6.31888 </x-m>
+      <y-m>  0.10959 </y-m>
+      <z-m>  0.53088 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Left center -->
+  <model>
+    <path>fire.xml</path>
+    <condition>
+      <!-- <property>controls/armament/trigger</property> -->
+      <property>sim/multiplay/generic/int[10]</property>
+    </condition>
+    <offsets>
+      <x-m> -5.75908 </x-m>
+      <y-m> -0.21600 </y-m>
+      <z-m>  0.40588 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Right center -->
+  <model>
+    <path>fire.xml</path>
+    <condition>
+      <!-- <property>controls/armament/trigger</property> -->
+      <property>sim/multiplay/generic/int[10]</property>
+    </condition>
+    <offsets>
+      <x-m> -5.83908 </x-m>
+      <y-m>  0.21600 </y-m>
+      <z-m>  0.40588 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Left bottom -->
+  <model>
+    <path>fire.xml</path>
+    <condition>
+      <!-- <property>controls/armament/trigger</property> -->
+      <property>sim/multiplay/generic/int[10]</property>
+    </condition>
+    <offsets>
+      <x-m> -5.45908 </x-m>
+      <y-m> -0.12841 </y-m>
+      <z-m> -0.15657 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Right bottom -->
+  <model>
+    <path>fire.xml</path>
+    <condition>
+      <!-- <property>controls/armament/trigger</property> -->
+      <property>sim/multiplay/generic/int[10]</property>
+    </condition>
+    <offsets>
+      <x-m> -5.45908 </x-m>
+      <y-m>  0.12841 </y-m>
+      <z-m> -0.15657 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

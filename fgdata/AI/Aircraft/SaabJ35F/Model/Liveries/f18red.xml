@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<PropertyList>
+
+<sim>
+  <model>
+    <livery>
+      <name type="string">Petter Red</name>
+      <texture>Liveries/draken_petterred.png</texture>
+      <refl_correction type="string">0.2</refl_correction>
+    </livery>
+  </model>
+</sim>
+
+</PropertyList>
+

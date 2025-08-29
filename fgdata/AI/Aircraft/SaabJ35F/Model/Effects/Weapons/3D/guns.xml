@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>guns.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>gun</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <model>
+    <name>RearFire</name>
+    <path>../guns/fire.xml</path>
+    <condition>
+      <!-- <property>controls/armament/trigger1</property> -->
+      <property>sim/multiplay/generic/int[11] </property>
+    </condition>
+    <offsets>
+      <x-m> -0.65149 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.00107 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!--==========Turning Turret =====================-->
+  <animation>
+    <type>rotate</type>
+    <object-name>gun</object-name>
+    <object-name>RearFire</object-name>
+    <!-- <property>sim/model/turret[0]/heading</property> -->
+    <property>sim/multiplay/generic/float[18] </property>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>gun</object-name>
+    <object-name>RearFire</object-name>
+    <!-- <property>sim/model/turret[0]/pitch</property> -->
+    <property>sim/multiplay/generic/float[19]</property>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

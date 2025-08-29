@@ -1,0 +1,963 @@
+<?xml version="1.0"?>
+
+<!--
+Draken internal models
+Anders  M
+-->
+
+<PropertyList>
+
+ <path>draken_internal.ac</path>
+
+<!-- ********** Instruments indicators and switches ********* -->
+ <model>
+   <path>Model/instruments.xml</path>
+ </model> 
+ 
+ <model>
+   <path>Model/switches.xml</path>
+ </model>
+
+ <model>
+  <name>Cabin_light</name>
+  <path>Model/Light/cabin_light.xml</path>
+ </model>
+ 
+  <model>
+  <name>Consol_lights</name>
+  <path>Model/Light/consol_lights.xml</path>
+ </model>
+
+ <effect>
+  <inherits-from>Effects/Glass/sight_glass</inherits-from>
+   <object-name>HUD_glass</object-name>
+   <object-name>HUD_sight</object-name>
+ </effect> 
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>HUD_sight</object-name>
+  <object-name>HUD_glass</object-name>
+ </animation>
+  
+<!-- Gear controls -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Gears</object-name>
+  <property>/controls/gear/gear-down</property>
+  <factor>30</factor>
+  <center>
+   <x-m>-3.83</x-m>
+   <y-m>-0.35</y-m>
+   <z-m>0.165</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+   <object-name>Gears</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/gear/gear-down</property>
+    </binding>
+   </action>
+   <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>gearleaver</tooltip-id>
+      <label>Gears: %s</label>
+      <measure-text>Gears: Down</measure-text>
+      <property>/controls/gear/gear-down</property>
+      <mapping>down-up</mapping>
+    </binding>
+   </hovered>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>NoseW_control</object-name>
+  <property>/gear/gear[0]/steering-norm</property>
+  <factor>-88</factor>
+  <center>
+   <x-m>-3.92</x-m>
+   <y-m>0.324</y-m>
+   <z-m>0.026</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+<!-- Dragchute handle -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Parachute_handle</object-name>
+  <property>/controls/dragchute/chute-lever</property>
+  <factor>-33</factor>
+  <center>
+   <x-m>-3.83</x-m>
+   <y-m>-0.35</y-m>
+   <z-m>0.165</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>Parachute_handle</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+	    <command>nasal</command>
+			<script>SaabJ35F.chute_handler();</script>
+    </binding>
+   </action>
+   <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>paraleaver</tooltip-id>
+      <label>Parachute: %s</label>
+      <measure-text>Parachute deployed</measure-text>
+      <property>/instrumentation/chute_state</property>
+      <mapping>nasal</mapping>
+      <script>
+       var state=["No chute", "Loaded", "Deployed", "Dropped"];
+       return state[arg[0]];
+      </script>
+     </binding>
+   </hovered>
+ </animation>
+
+<!-- Parking brake handle -->
+
+ <animation>
+  <type>translate</type>
+  <object-name>P_brake</object-name>
+  <property>/controls/gear/brake-parking</property>
+  <factor>0.03</factor>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+   <object-name>P_brake</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/gear/brake-parking</property>
+    </binding>
+    <binding>
+    <command>nasal</command>
+      <script>SaabJ35F.sound_helper("sound-large");</script>
+   </binding>
+   </action>
+   <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>pbrakeleaver</tooltip-id>
+      <label>Parking brake: %s</label>
+      <measure-text>Parking brake: released</measure-text>
+      <property>/controls/gear/brake-parking</property>
+      <mapping>nasal</mapping>
+      <script>
+       var state=["Released", "Set"];
+       return state[arg[0]];
+      </script>
+     </binding>
+   </hovered>
+ </animation>
+
+
+<!-- Canopy control -->
+
+ <animation>
+  <type>translate</type>
+  <object-name>Canopy_control</object-name>
+  <property>/controls/canopy/control</property>
+  <factor>0.08</factor>
+  <axis>
+   <x>1</x>
+   <y>0.1</y>
+   <z>0.120</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>translate</type>
+  <object-name>Canopy_control</object-name>
+  <property>/controls/canopy/enabled</property>
+  <factor>-0.01</factor>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>Canopy_control</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+	    <command>nasal</command>
+			<script>SaabJ35F.canopy_operate();</script>
+    </binding>
+   </action>
+   <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>canopylev</tooltip-id>
+      <label>Canopy level</label>
+     </binding>
+   </hovered>
+ </animation>
+ 
+ 
+<!-- Engine controls -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Throttle</object-name>
+  <property>/controls/engines/engine[0]/throttle</property>
+  <factor>-75</factor>
+  <center>
+   <x-m>-3.83</x-m>
+   <y-m>-0.30</y-m>
+   <z-m>0.165</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>ebk_switch</object-name>
+  <property>fdm/jsbsim/propulsion/afterburner-on</property>
+  <factor>60</factor>
+  <offset-deg>-60</offset-deg>
+  <center>
+   <x-m>-4.007</x-m>
+   <y-m>-0.4279</y-m>
+   <z-m>0.3771</z-m>
+  </center>
+  <axis>
+   <x>0.9994</x>
+   <y>0.0349</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>ebk_switch</object-name>
+  <hovered>
+   <binding>
+    <condition>
+     <property>instrumentation/tooltip</property>
+    </condition>
+    <command>set-tooltip</command>
+    <tooltip-id>ebkon</tooltip-id>
+    <label>AB %s</label>
+     <property>fdm/jsbsim/propulsion/afterburner-on</property>
+     <mapping>on-off</mapping>
+   </binding>
+  </hovered>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-toggle</command>
+    <property>fdm/jsbsim/propulsion/afterburner-on</property>
+   </binding>
+   <binding>
+    <command>nasal</command>
+      <script>SaabJ35F.sound_helper("sound-small");</script>
+   </binding>
+  </action>
+ </animation>
+ 
+<!-- Flight controls -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Control</object-name>
+  <property>/controls/flight/elevator</property>
+  <interpolation>
+   <entry>
+    <ind> -1.0</ind>
+    <dep> 25.0</dep>
+   </entry>
+   <entry>
+    <ind> 0.0</ind>
+    <dep> 0.0</dep>
+   </entry>
+   <entry>
+    <ind> 0.5</ind>
+    <dep> -12</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>-4.075</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0695</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Control</object-name>
+  <property>/controls/flight/aileron</property>
+  <factor>-12</factor>
+  <center>
+   <x-m>-4.075</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0695</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>R_cont_R</object-name>
+  <property>/controls/flight/rudder</property>
+  <factor>10</factor>
+  <center>
+   <x-m>-4.269</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.334</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>R_cont_L</object-name>
+  <property>/controls/flight/rudder</property>
+  <factor>-10</factor>
+  <center>
+   <x-m>-4.269</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.334</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <!-- Drop tanks control -->   
+ <animation>
+  <type>pick</type>
+   <object-name>DT_jet</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+     <command>nasal</command>
+     <script>SaabJ35F.drophandle(1);</script>
+    </binding>
+   </action>
+   <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>dtjet</tooltip-id>
+      <label>Jettison Droptank</label>
+     </binding>
+   </hovered>
+ </animation>
+
+ <!-- Lighting control -->
+ 
+ <animation>
+    <name>InstrumentLightKnob</name>
+        <type>knob</type>
+        <object-name>Inst_light_knb</object-name>
+        <property>instrumentation/switches/inst-light-knob/pos</property>
+        <factor>-400</factor>
+    <center>
+      <x-m>-3.751</x-m>
+      <y-m>-0.387</y-m>
+      <z-m>0.41663</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/switches/inst-light-knob/pos</property>
+        <factor>0.05</factor>
+        <min>0</min>
+        <max>0.5</max>                
+        <wrap>false</wrap>
+      </binding>
+    </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>inslight</tooltip-id>
+      <label>Inst. light: %3d%%</label>
+      <measure-text>Inst. light: 100%</measure-text>
+      <property>instrumentation/switches/inst-light-knob/pos</property>
+      <mapping>nasal</mapping>
+       <script>
+        var setting = arg[0]*200;
+        return setting;
+       </script>
+    </binding>
+  </hovered>
+ </animation>
+ 
+ <animation>
+    <name>ConsolLightKnob</name>
+        <type>knob</type>
+        <object-name>Consol_light_knb</object-name>
+        <property>instrumentation/switches/consol-light-knob/pos</property>
+        <factor>-200</factor>
+    <center>
+      <x-m>-3.712</x-m>
+      <y-m>-0.389</y-m>
+      <z-m>0.41663</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+     <z>1</z>
+    </axis>
+    <action>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/switches/consol-light-knob/pos</property>
+      <factor>0.05</factor>
+      <min>0</min>
+      <max>1.0</max>                
+      <wrap>false</wrap>
+    </binding>
+    </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>conlight</tooltip-id>
+      <label>Consol light: %3d%%</label>
+      <measure-text>Consol light: 100%</measure-text>
+      <mapping>percent</mapping>
+      <property>instrumentation/switches/consol-light-knob/pos</property>
+    </binding>
+  </hovered>
+ </animation>
+ 
+  <animation>
+    <name>IndicatorLightKnob</name>
+        <type>knob</type>
+        <object-name>indicator_knob</object-name>
+        <property>instrumentation/switches/indicator-light-knob/pos</property>
+        <factor>150</factor>
+        <offset-deg>-150</offset-deg>
+    <center>
+      <x-m>-3.643</x-m>
+      <y-m>0.4125</y-m>
+      <z-m>0.3793</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0.9720</y>
+     <z>0.2343</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-cycle</command>
+        <property>instrumentation/switches/indicator-light-knob/pos</property>
+        <value type="double">1.0</value>
+        <value type="double">0.5</value>
+      </binding>
+      <binding>
+    <command>nasal</command>
+      <script>SaabJ35F.sound_helper("sound-small");</script>
+   </binding>
+    </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>indlight</tooltip-id>
+      <label>Indicators: %s</label>
+      <measure-text>Indicators: Full</measure-text>
+      <property>instrumentation/switches/indicator-light-knob/pos</property>
+      <mapping>nasal</mapping>
+       <script>
+        if (arg[0] == 1.0) {return "Full"} else {return "Half"};
+       </script>
+    </binding>
+  </hovered>
+ </animation>
+
+<!-- Special switches -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>stallwset</object-name>
+  <property>instrumentation/stall-warn-setting/pos</property>
+  <factor>60</factor>
+  <center>
+   <x-m>-4.079</x-m>
+   <y-m>0</y-m>
+   <z-m>0.269</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>stallwset</object-name>
+  <hovered>
+   <binding>
+    <condition>
+     <property>instrumentation/tooltip</property>
+    </condition>
+    <command>set-tooltip</command>
+    <tooltip-id>pin</tooltip-id>
+    <label>Stall W. limit %s</label>
+     <property>instrumentation/stall-warn-setting/pos</property>
+     <mapping>nasal</mapping>
+     <script><![CDATA[
+       if (arg[0]) return "Early";
+       else return "Normal"]]>
+     </script>
+   </binding>
+  </hovered>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>property-cycle</command>
+    <property>instrumentation/stall-warn-limit</property>
+    <value>15.5</value>
+    <value>14.0</value>
+   </binding>
+   <binding>
+    <command>property-toggle</command>
+    <property>instrumentation/stall-warn-setting/pos</property>
+   </binding>
+   <binding>
+    <command>nasal</command>
+      <script>SaabJ35F.sound_helper("sound-small");</script>
+   </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>slider</type>
+  <object-name>UHFbutton</object-name>
+  <property>/instrumentation/fr21/transmit</property>
+  <factor>0.002</factor>
+  <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>-1</z>
+  </axis>
+  <action>
+     <binding>
+         <command>property-assign</command>
+         <property>instrumentation/fr21/transmit</property>
+         <value>true</value>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+        SaabJ35F.sound_helper("sound-small");        
+      </script>
+    </binding>
+  </action>
+  <release>
+    <binding>
+      <command>property-assign</command>
+      <property>instrumentation/fr21/transmit</property>
+      <value>false</value>
+    </binding>
+    <binding>
+      <command>nasal</command>
+      <script>
+      SaabJ35F.stril_message();        
+      </script>
+  </binding>
+  </release>
+  <hovered>
+      <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>transmitbtn</tooltip-id>
+          <label>Transmit</label>
+      </binding>
+  </hovered>
+ </animation>
+ 
+ <!-- Sight -->
+ <animation>
+  <type>material</type>
+  <object-name>HUD_sight</object-name>
+  <emission>
+   <red>1</red>
+   <green>1</green>
+   <blue>1</blue>
+   <factor>1</factor>
+  </emission>
+ </animation> 
+
+<animation>
+ <type>material</type> 
+ <object-name>sight_knob</object-name>
+ <object-name>sight_knob_ring</object-name>
+ <emission>	
+  <red>1</red>	
+  <green>0.3</green>	
+  <blue>0.3</blue>
+  <factor-prop>controls/lighting/instruments-norm</factor-prop>
+ </emission>
+</animation>
+
+<animation>
+    <name>BrightnessKnob</name>
+        <type>knob</type>
+        <object-name>sight_light_knob</object-name>
+        <property>instrumentation/sight/brightness</property>
+        <factor>-12.56</factor>
+    <center>
+      <x-m>-4.3794</x-m>
+      <y-m>0.1075</y-m>
+      <z-m>0.77831</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1.0</y>
+     <z>0</z>
+    </axis>
+    <action>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/sight/brightness</property>
+      <factor>0.05</factor>
+      <min>0.5</min>
+      <max>1.0</max>                
+      <wrap>false</wrap>
+    </binding>
+    </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>sightbright</tooltip-id>
+      <label>Sight brightness: %3d%%</label>
+      <measure-text>Sight brightness: %3d%%</measure-text>
+      <property>instrumentation/sight/brightness</property>
+      <mapping>percent</mapping>
+     </binding>
+   </hovered>
+ </animation>
+
+<animation>
+    <name>WingspanKnob</name>
+        <type>knob</type>
+        <object-name>sight_knob</object-name>
+        <property>instrumentation/sight/wingspan</property>
+        <factor>-5.496</factor>
+        <offset-deg>54.96</offset-deg>
+    <center>
+      <x-m>-4.2388</x-m>
+      <y-m>0.10396</y-m>
+      <z-m>0.76489</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1.0</y>
+     <z>0</z>
+    </axis>
+    <action>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/sight/wingspan</property>
+      <factor>1</factor>
+      <min>5</min>
+      <max>60</max>                
+      <wrap>false</wrap>
+    </binding>
+    </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>sightwingspan</tooltip-id>
+      <label>Wingspan: %d m</label>
+      <measure-text>Winspan: 50</measure-text>
+      <property>instrumentation/sight/wingspan</property>
+     </binding>
+   </hovered>
+ </animation>
+     
+ <!-- Radar control -->
+
+<animation>
+    <name>SkopeLightKnob</name>
+        <type>knob</type>
+        <object-name>skope_light_knob</object-name>
+        <property>instrumentation/radar/radar_skope_light</property>
+        <factor>270</factor>
+    <center>
+      <x-m>-3.9082</x-m>
+      <y-m>0.3915</y-m>
+      <z-m>0.3786</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0.9720</y>
+     <z>0.2343</z>
+    </axis>
+    <action>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/radar/radar_skope_light</property>
+      <factor>0.05</factor>
+      <min>0</min>
+      <max>1.0</max>                
+      <wrap>false</wrap>
+    </binding>
+    </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>scopebright</tooltip-id>
+      <label>Scope brightness: %3d%%</label>
+      <measure-text>Sight brightness: %3d%%</measure-text>
+      <property>instrumentation/radar/radar_skope_light</property>
+      <mapping>percent</mapping>
+     </binding>
+   </hovered>
+ </animation>
+ 
+ <animation>
+    <name>CrossIntKnob</name>
+        <type>knob</type>
+        <object-name>cross_int_knob</object-name>
+        <property>instrumentation/radar/radar_cross_light</property>
+        <factor>270</factor>
+        <offset-deg>0</offset-deg>
+    <center>
+      <x-m>-3.8034</x-m>
+      <y-m>0.3958</y-m>
+      <z-m>0.3798</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0.9720</y>
+     <z>0.2343</z>
+    </axis>
+    <action>
+    <binding>
+      <command>property-adjust</command>
+      <property>instrumentation/radar/radar_cross_light</property>
+      <factor>0.05</factor>
+      <min>0</min>
+      <max>1.0</max>                
+      <wrap>false</wrap>
+    </binding>
+    </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+      </condition>
+      <command>set-tooltip</command>
+      <tooltip-id>crossbright</tooltip-id>
+      <label>Guide brightness: %3d%%</label>
+      <measure-text>Guide brightness: %3d%%</measure-text>
+      <property>instrumentation/radar/radar_cross_light</property>
+      <mapping>percent</mapping>
+     </binding>
+   </hovered>
+ </animation>
+  
+ <animation>
+    <name>RadarSettingSwitch</name>
+        <type>knob</type>
+        <object-name>radar_setting_switch</object-name>
+        <property>instrumentation/radar/mode_select</property>
+        <factor>30</factor>
+        <offset-deg>-60</offset-deg>
+    <center>
+      <x-m>-3.891</x-m>
+      <y-m>0.4079</y-m>
+      <z-m>0.3154</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0.9720</y>
+     <z>0.2343</z>
+    </axis>
+    <action>
+    <binding>
+      <command>property-cycle</command>
+      <property>instrumentation/radar/mode_select</property>
+      <value type="int">0</value> <!-- Off -->
+      <value type="int">1</value> <!-- Standby -->
+      <value type="int">2</value> <!-- On -->
+      <value type="int">3</value> <!-- Silent -->
+      <value type="int">4</value> <!-- Broadcasting -->                                 
+      <wrap>false</wrap>
+    </binding>
+    <binding>
+    <command>nasal</command>
+      <script>SaabJ35F.sound_helper("sound-large");</script>
+   </binding>
+    </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+     </condition>
+     <command>set-tooltip</command>
+     <tooltip-id>radarmode</tooltip-id>
+      <label>Radar: %s</label>
+      <measure-text>Radar: Broadcasting</measure-text>
+      <property>instrumentation/radar/mode_select</property>
+      <mapping>nasal</mapping>
+       <script>
+        var modes=["Off", "Standby", "On", "Silent", "Broadcasting"];
+        return modes[arg[0]];
+       </script>
+    </binding>
+  </hovered>
+ </animation>
+ 
+ <!-- Weapon controls-->
+
+ <animation>
+    <name>WeaponChooserSwitch</name>
+        <type>knob</type>
+        <object-name>weapon_chooser_switch</object-name>
+        <property>instrumentation/armament/selected</property>
+        <factor>30</factor>
+    <center>
+      <x-m>-3.803</x-m>
+      <y-m>0.4118</y-m>
+      <z-m>0.3167</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>0.9720</y>
+     <z>0.2343</z>
+    </axis>
+    <action>
+    <binding>
+      <command>property-cycle</command>
+      <property>instrumentation/armament/selected</property>
+      <value type="int">0</value> <!-- Off -->
+      <value type="int">1</value> <!-- AKAN -->
+      <value type="int">2</value> <!-- RB27 -->
+      <value type="int">3</value> <!-- JRAK -->
+      <value type="int">4</value> <!-- ARAK -->  
+      <value type="int">5</value> <!-- RB24B -->                               
+      <wrap>false</wrap>
+    </binding>
+    <binding>
+    <command>nasal</command>
+      <script>SaabJ35F.sound_helper("sound-large");</script>
+   </binding>
+    </action>
+    <hovered>
+     <binding>
+      <condition>
+       <property>instrumentation/tooltip</property>
+     </condition>
+     <command>set-tooltip</command>
+     <tooltip-id>weponmode</tooltip-id>
+      <label>Armament: %s</label>
+      <measure-text>Armament: RB24B</measure-text>
+      <property>instrumentation/armament/selected</property>
+      <mapping>nasal</mapping>
+       <script>
+        var modes=["Off", "AKAN", "RB27", "JRAK", "ARAK", "RB24B"];
+        return modes[arg[0]];
+       </script>
+    </binding>
+  </hovered>
+ </animation> 
+ 
+</PropertyList>

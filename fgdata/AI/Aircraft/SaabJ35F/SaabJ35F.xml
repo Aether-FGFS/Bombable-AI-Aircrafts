@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Model/draken.xml">
+
+  <model>
+    <path>AI/Aircraft/SaabJ35F/Model/draken.xml</path>
+  </model>
+
+</PropertyList>

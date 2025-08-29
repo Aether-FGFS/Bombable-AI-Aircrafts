@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+  <name>Effects/Glass/sight_glass</name>
+  <inherits-from>Effects/hud</inherits-from>
+
+  <parameters>
+    <glass-tint type="vec4d" n="0"> 1.0 1.0 0.7 1.0</glass-tint>
+    <overlay-color type="vec3d" n="0"> 1.0 1.0 0.8</overlay-color>
+    <fog-level>0</fog-level>
+    <use-wipers>0</use-wipers>
+    <use-overlay>0</use-overlay>
+    <overlay-alpha>0></overlay-alpha>
+    <rnorm>0></rnorm>
+    <gsnorm>0</gsnorm>
+    <frost-level>0</frost-level>    
+  </parameters>
+</PropertyList>

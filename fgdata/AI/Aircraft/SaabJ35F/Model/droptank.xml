@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!-- Droptanks -->
+
+<PropertyList>
+
+  <path>draken_droptank.ac</path>
+  
+  <effect>
+   <inherits-from>Effects/Bump/bumpspec</inherits-from>
+      <object-name>draken_right_droptank</object-name>
+  </effect>
+
+</PropertyList>

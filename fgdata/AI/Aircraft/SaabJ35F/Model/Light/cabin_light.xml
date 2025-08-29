@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<light>
+      <name>Cabinlight</name>
+      <type>spot</type>
+      <position>
+         <x-m>-4.0</x-m>
+         <y-m>0</y-m>
+         <z-m>1.0</z-m>
+      </position>
+      <direction>
+         <x>0</x>
+         <y>0</y>
+         <z>-1</z>
+      </direction>
+      <ambient>
+         <r>0.03</r>
+         <g>0.03</g>
+         <b>0.02</b>
+         <a>1</a>
+      </ambient>
+      <diffuse>
+         <r>0.75</r>
+         <g>0.70</g>
+         <b>0.5</b>
+         <a>1</a>
+      </diffuse>
+      <specular>
+         <r>0.75</r>
+         <g>0.70</g>
+         <b>0.5</b>
+         <a>1</a>
+      </specular>
+      <attenuation>
+         <c>0.0</c>
+         <l>0.01</l>
+         <q>0</q>
+      </attenuation>
+      <spot-exponent>5</spot-exponent>
+      <spot-cutoff>60</spot-cutoff>
+      <range-m>1.0</range-m>
+      <dim-factor>
+         <expression>
+           <product>
+              <property>controls/lighting/cabin-light</property>
+              <value>0.010</value>
+           </product>
+         </expression>
+      </dim-factor>
+   </light>
+   
+   </PropertyList>

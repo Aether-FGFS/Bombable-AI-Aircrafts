@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <submodel>
+        <name>Droptank L heavy bomb</name>
+        <model>Model/draken_droptank.ac</model>
+        <trigger>/rendering/submodels/dropL</trigger>
+
+        <repeat>false</repeat>
+        <count>1</count>
+        <delay>0</delay>
+
+        <speed>0</speed>
+        <wind>false</wind>
+        <aero-stabilised>true</aero-stabilised>
+        <eda>3</eda>
+        <cd>0.20</cd>
+        <weight>200</weight>
+        <life>900</life>
+        <collision>true</collision>
+        <impact>true</impact>
+        <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+        <impact-report>ai/models/model-impact</impact-report>
+        <submodel-path>Aircraft/SaabJ35F/Model/Effects/Weapons/Impact/bomb-impact.xml</submodel-path>
+        <offsets>
+            <x-m>1.63</x-m>
+            <y-m>-0.57</y-m>
+            <z-m>-0.55</z-m>
+        </offsets>
+    </submodel>
+
+    <submodel>
+        <name>Droptank R heavy bomb</name>
+        <model>Model/draken_droptank.ac</model>
+        <trigger>/rendering/submodels/dropR</trigger>
+
+        <repeat>false</repeat>
+        <count>1</count>
+        <delay>0</delay>
+
+        <speed>0</speed>
+        <wind>false</wind>
+        <aero-stabilised>true</aero-stabilised>
+        <eda>3</eda>
+        <cd>0.20</cd>
+        <weight>200</weight>
+        <life>900</life>
+        <collision>true</collision>
+        <impact>true</impact>
+        <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+        <impact-report>ai/models/model-impact</impact-report>
+        <submodel-path>Aircraft/SaabJ35F/Model/Effects/Weapons/Impact/bomb-impact.xml</submodel-path>
+        <offsets>
+            <x-m>1.63</x-m>
+            <y-m>0.57</y-m>
+            <z-m>-0.55</z-m>
+        </offsets>
+    </submodel>
+
+    <submodel>
+        <name>ADEN 30mm round cannon</name>
+        <model>Aircraft/SaabJ35F/Model/ADEN-30mm-round.xml</model>
+        <trigger>ai/submodels/ADEN</trigger>
+        <speed>2591.9</speed> <!-- 790 m/s -->
+        <repeat>true</repeat>
+        <delay>0.03529</delay> <!-- 1700 rounds/minute -->
+        <count>500</count>
+        <offsets>
+            <x-m>-1.08</x-m>
+            <y-m>1.82</y-m>
+            <z-m>0.22</z-m>
+        </offsets>
+        <eda>0.0122</eda>
+        <weight>0.485</weight> <!-- 220 grams -->
+        <cd>0.295</cd>
+        <buoyancy>32</buoyancy>
+        <wind>false</wind>
+        <aero-stabilised>true</aero-stabilised>
+        <life>5</life>
+        <collision>true</collision>
+        <impact>true</impact>
+        <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+        <impact-report>ai/models/model-impact</impact-report>
+        <submodel-path>Aircraft/SaabJ35F/Model/Effects/Weapons/guns/12mm/bullet-submodel.xml</submodel-path>
+    </submodel>
+
+</PropertyList>
