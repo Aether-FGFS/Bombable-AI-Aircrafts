@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <scenario>
+   <description>T-34 Bombable Training scenario.  Starts at KSFO! </description>
+		
+    <entry>
+      <search-order>PREFER_AI</search-order>
+      <type>ship</type>
+      <callsign>T-34</callsign>
+      <name>Tank-T-34-0</name>
+      <model type="string">Aircraft/T-34/Models/T-34-76.xml</model>
+      <latitude type="double">37.608200</latitude>
+      <longitude type="double">-122.2902</longitude>
+      <altitude>0.10</altitude>
+      <speed>8</speed>
+      <rudder type="double">0</rudder>
+      <heading type="double">110</heading>
+    </entry>
+
+    <entry>
+      <search-order>PREFER_AI</search-order>
+      <type>ship</type>
+      <callsign>T-34-1</callsign>
+      <name>Tank-T-34-1</name>
+      <model type="string">Aircraft/T-34/Models/T-34-76.xml</model>
+      <latitude type="double">37.608200</latitude>
+      <longitude type="double">-122.2902</longitude>
+      <altitude>0.10</altitude>
+      <speed>9</speed>
+      <rudder type="double">0</rudder>
+      <heading type="double">110</heading>
+    </entry>
+
+    <entry>
+      <search-order>PREFER_AI</search-order>
+      <type>ship</type>
+      <callsign>T-34-2</callsign>
+      <name>Tank-T-34-2</name>
+      <model type="string">Aircraft/T-34/Models/T-34-76.xml</model>
+      <latitude type="double">37.608200</latitude>
+      <longitude type="double">-122.2902</longitude>
+      <altitude>0.10</altitude>
+      <speed>10</speed>
+      <rudder type="double">0</rudder>
+      <heading type="double">110</heading>
+    </entry>
+
+    <entry>
+      <search-order>PREFER_AI</search-order>
+      <type>ship</type>
+      <callsign>T-34-3</callsign>
+      <name>Tank-T-34-3</name>
+      <model type="string">Aircraft/T-34/Models/T-34-76.xml</model>
+      <latitude type="double">37.608200</latitude>
+      <longitude type="double">-122.2902</longitude>
+      <altitude>0.10</altitude>
+      <speed>8</speed>
+      <rudder type="double">0</rudder>
+      <heading type="double">110</heading>
+    </entry>
+ </scenario>
+
+</PropertyList>
+
