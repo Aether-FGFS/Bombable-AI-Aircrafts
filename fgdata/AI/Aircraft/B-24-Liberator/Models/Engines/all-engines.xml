@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left exterior -->
+  <model>
+    <path>engine.xml</path>
+    <offsets>
+      <x-m> -7.287 </x-m>
+      <y-m> -6.505 </y-m>
+      <z-m> -0.184 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Left interior -->
+  <model>
+    <path>engine.xml</path>
+    <offsets>
+      <x-m> -7.820 </x-m>
+      <y-m> -3.021 </y-m>
+      <z-m> -0.585 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right interior -->
+  <model>
+    <path>engine.xml</path>
+    <offsets>
+      <x-m> -7.820 </x-m>
+      <y-m>  3.021 </y-m>
+      <z-m> -0.585 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right exterior -->
+  <model>
+    <path>engine.xml</path>
+    <offsets>
+      <x-m> -7.287 </x-m>
+      <y-m>  6.505 </y-m>
+      <z-m> -0.184 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Ju-87-bombableinclude.xml">
+
+  <path>ju87.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>ju87</object-name>
+    <object-name>bol</object-name>
+    <object-name>guns</object-name>
+    <object-name>guns2</object-name>
+    <object-name>spoiler</object-name>
+    <object-name>bolsirene</object-name>
+
+    <object-name>helice</object-name>
+    <object-name>helicesirene</object-name>
+    <object-name>bomb</object-name>
+
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+    <object-name>propblursirene</object-name>
+    <object-name>propdiscsirene</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>ju87</object-name>
+    <object-name>bol</object-name>
+    <object-name>guns</object-name>
+    <object-name>guns2</object-name>
+    <object-name>spoiler</object-name>
+    <object-name>bolsirene</object-name>
+    <object-name>helice</object-name>
+    <object-name>helicesirene</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+    <object-name>propblursirene</object-name>
+    <object-name>propdiscsirene</object-name>
+    <property-base>/ai/models/multiplayer/sim/multiplay/generic</property-base>
+    <texture-prop>string[1]</texture-prop>
+    <texture>/ai/models/multiplayer/sim/multiplay/generic/string[1]</texture>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>guns</object-name>
+    <object-name>spolier</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/guns</property> -->
+        <property>/ai/models/multiplayer/sim/multiplay/generic/int[6]</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>guns2</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/guns</property> -->
+        <property>/ai/models/multiplayer/sim/multiplay/generic/int[6]</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+  </effect>
+
+  <model>
+    <path>Effects/light/all-lights.xml</path>
+  </model>
+
+  <!-- L'hélice -->
+  <animation>
+    <name>HeliceComplete</name>
+    <object-name>helice</object-name>
+    <object-name>bol</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+  </animation>
+
+  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <animation>
+    <type>select</type>
+    <object-name>propdisc</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>14</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblur</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>60</value>
+        </greater-than>
+        <less-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>101</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>helice</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>101</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceComplete</object-name>
+    <property>velocities/true-airspeed-kt</property>
+    <factor> 10 </factor>
+    <center>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.245 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- L'hélice de la sirène -->
+  <animation>
+    <name>HeliceCompleteSirene</name>
+    <object-name>propdiscsirene</object-name>
+    <object-name>propblursirene</object-name>
+    <object-name>helicesirene</object-name>
+    <object-name>bolsirene</object-name>
+  </animation>
+
+  <!-- Séléction de l'objet visible en fonction de la vitesse -->
+  <animation>
+    <type>select</type>
+    <object-name>propdiscsirene</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>200</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblursirene</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>100.000</value>
+        </greater-than>
+        <less-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>200.001</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>helicesirene</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>150</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceCompleteSirene</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
+    <property>velocities/true-airspeed-kt</property>
+    <factor> 8 </factor>
+    <center>
+      <x-m> -2.52207 </x-m>
+      <y-m> -1.58600 </y-m>
+      <z-m> -0.65488 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

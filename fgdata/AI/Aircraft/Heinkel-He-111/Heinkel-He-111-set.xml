@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/he111.xml">
+
+  <model>
+    <path>AI/Aircraft/Heinkel-He-111/Models/he111.xml</path>
+  </model>
+
+</PropertyList>

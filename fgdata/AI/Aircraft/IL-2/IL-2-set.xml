@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/il2.xml">
+
+  <model>
+    <path>AI/Aircraft/IL-2/Models/il2.xml</path>
+  </model>
+
+</PropertyList>

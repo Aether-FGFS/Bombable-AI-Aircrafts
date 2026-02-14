@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Heinkel-He-111-bombableinclude.xml">
+
+  <path>he111.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>he111</object-name>
+    <object-name>bolG</object-name>
+    <object-name>bolD</object-name>
+    <object-name>portesfermees</object-name>
+    <object-name>portesouvertes</object-name>
+
+    <object-name>heliceG</object-name>
+    <object-name>heliceD</object-name>
+    <object-name>rouesrentrees</object-name>
+    <object-name>rouessorties</object-name>
+    <object-name>guns</object-name>
+
+    <object-name>propblurG</object-name>
+    <object-name>propblurD</object-name>
+    <object-name>propdiscG</object-name>
+    <object-name>propdiscD</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>he111</object-name>
+    <object-name>bolG</object-name>
+    <object-name>bolD</object-name>
+    <object-name>portesfermees</object-name>
+    <object-name>portesouvertes</object-name>
+    <object-name>heliceG</object-name>
+    <object-name>heliceD</object-name>
+    <object-name>rouesrentrees</object-name>
+    <object-name>rouessorties</object-name>
+    <object-name>guns</object-name>
+    <object-name>propblurG</object-name>
+    <object-name>propblurD</object-name>
+    <object-name>propdiscG</object-name>
+    <object-name>propdiscD</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+
+  <effect>
+    <inherits-from>AI/Aircraft/Heinkel-He-111/Models/Effects/Bump/bumpspec</inherits-from>
+    <object-name>he111</object-name>
+    <object-name>bolG</object-name>
+    <object-name>bolD</object-name>
+    <object-name>portesfermees</object-name>
+    <object-name>portesouvertes</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propblurG</object-name>
+    <object-name>propblurD</object-name>
+    <object-name>propdiscG</object-name>
+    <object-name>propdiscD</object-name>
+  </effect>
+
+  <model>
+    <path>Effects/light/all-lights.xml</path>
+  </model>
+
+  <!-- Les hélices -->
+  <animation>
+    <name>HeliceCompleteG</name>
+    <object-name>propdiscG</object-name>
+    <object-name>propblurG</object-name>
+    <object-name>heliceG</object-name>
+    <object-name>bolG</object-name>
+  </animation>
+
+  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <animation>
+    <type>select</type>
+    <object-name>propdiscG</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>14</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblurG</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>60</value>
+        </greater-than>
+        <less-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>101</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>heliceG</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>101</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceCompleteG</object-name>
+    <property>velocities/true-airspeed-kt</property>
+    <factor> 10 </factor>
+    <center>
+      <x-m> -7.731 </x-m>
+      <y-m> -2.678 </y-m>
+      <z-m> -0.422 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <name>HeliceCompleteD</name>
+    <object-name>propdiscD</object-name>
+    <object-name>propblurD</object-name>
+    <object-name>heliceD</object-name>
+    <object-name>bolD</object-name>
+  </animation>
+
+  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <animation>
+    <type>select</type>
+    <object-name>propdiscD</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>14</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblurD</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>60</value>
+        </greater-than>
+        <less-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>101</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>heliceD</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>101</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceCompleteD</object-name>
+    <property>velocities/true-airspeed-kt</property>
+    <factor> 10 </factor>
+    <center>
+      <x-m> -7.731 </x-m>
+      <y-m>  2.678 </y-m>
+      <z-m> -0.422 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Roues sorties -->
+  <animation>
+    <type>select</type>
+    <object-name>rouessorties</object-name>
+    <object-name>portesouvertes</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>60</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <!-- Roues rentrée -->
+  <animation>
+    <type>select</type>
+    <object-name>rouesrentrees</object-name>
+    <object-name>portesfermees</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>59</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+</PropertyList>
