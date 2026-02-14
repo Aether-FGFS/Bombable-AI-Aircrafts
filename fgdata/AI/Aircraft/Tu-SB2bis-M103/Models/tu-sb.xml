@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Tu-SB2bis-M103-bombableinclude.xml">
+
+  <path>tu-sb.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>tu-sb</object-name>
+    <object-name>bolG</object-name>
+    <object-name>bolD</object-name>
+    <object-name>moteursTU</object-name>
+    <object-name>portesfermeesTU</object-name>
+    <object-name>portesouvertesTU</object-name>
+    <object-name>moteursAVIA</object-name>
+    <object-name>portesfermeesAVIA</object-name>
+    <object-name>portesouvertesAVIA</object-name>
+
+    <object-name>guns</object-name>
+    <object-name>heliceG</object-name>
+    <object-name>heliceD</object-name>
+    <object-name>rouessorties</object-name>
+    <object-name>rouesrentrees</object-name>
+
+    <object-name>propdiscG</object-name>
+    <object-name>propblurG</object-name>
+    <object-name>propdiscD</object-name>
+    <object-name>propblurD</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propdiscG</object-name>
+    <object-name>propblurG</object-name>
+    <object-name>propdiscD</object-name>
+    <object-name>propblurD</object-name>
+  </effect>
+
+  <!-- TU-SBbis M103 mode -->
+  <animation>
+    <type>select</type>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>/ai/models/multiplayer/sim/multiplay/generic/string[0]</property>
+        <value>TU</value>
+      </equals>
+    </condition>
+    <object-name>moteursTU</object-name>
+    <object-name>portesfermeesTU</object-name>
+    <object-name>portesouvertesTU</object-name>
+  </animation>
+
+  <!-- AVIA B.71 mode -->
+  <animation>
+    <type>select</type>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>/ai/models/multiplayer/sim/multiplay/generic/string[0]</property>
+        <value>AVIA</value>
+      </equals>
+    </condition>
+    <object-name>moteursAVIA</object-name>
+    <object-name>portesfermeesAVIA</object-name>
+    <object-name>portesouvertesAVIA</object-name>
+  </animation>
+
+  <model>
+    <path>Effects/light/all-lights.xml</path>
+  </model>
+
+  <!-- L'hélice -->
+  <animation>
+    <name>HeliceComplete1</name>
+    <object-name>heliceG</object-name>
+    <object-name>bolG</object-name>
+    <object-name>propdiscG</object-name>
+    <object-name>propblurG</object-name>
+  </animation>
+
+  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <animation>
+    <type>select</type>
+    <object-name>propdiscG</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>14</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblurG</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>60</value>
+        </greater-than>
+        <less-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>101</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>heliceG</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>101</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceComplete1</object-name>
+    <property>velocities/true-airspeed-kt</property>
+    <factor> 10 </factor>
+    <center>
+      <x-m> -5.28055 </x-m>
+      <y-m> -2.55251 </y-m>
+      <z-m>  0.00288 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- L'hélice -->
+  <animation>
+    <name>HeliceComplete2</name>
+    <object-name>heliceD</object-name>
+    <object-name>bolD</object-name>
+    <object-name>propdiscD</object-name>
+    <object-name>propblurD</object-name>
+  </animation>
+
+  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <animation>
+    <type>select</type>
+    <object-name>propdiscD</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>14</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblurD</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>60</value>
+        </greater-than>
+        <less-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>101</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>heliceD</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>101</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceComplete2</object-name>
+    <property>velocities/true-airspeed-kt</property>
+    <factor> 10 </factor>
+    <center>
+      <x-m> -5.28055 </x-m>
+      <y-m>  2.55251 </y-m>
+      <z-m>  0.00288 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>rouessorties</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>60</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>rouesrentrees</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>59</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <!-- Roues sorties mode TU -->
+  <animation>
+    <type>select</type>
+    <object-name>portesouvertesTU</object-name>
+    <condition>
+      <and>
+        <equals>
+          <!-- <property>sim/model/mode</property> -->
+          <property>/ai/models/multiplayer/sim/multiplay/generic/string[0]</property>
+          <value>TU</value>
+        </equals>
+        <less-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>60</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+
+  <!-- Roues rentrées mode TU -->
+  <animation>
+    <type>select</type>
+    <object-name>portesfermeesTU</object-name>
+    <condition>
+      <and>
+        <equals>
+          <!-- <property>sim/model/mode</property> -->
+          <property>/ai/models/multiplayer/sim/multiplay/generic/string[0]</property>
+          <value>TU</value>
+        </equals>
+        <greater-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>59</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <!-- Roues sorties mode AVIA -->
+  <animation>
+    <type>select</type>
+    <object-name>portesouvertesAVIA</object-name>
+    <condition>
+      <and>
+        <equals>
+          <!-- <property>sim/model/mode</property> -->
+          <property>/ai/models/multiplayer/sim/multiplay/generic/string[0]</property>
+          <value>AVIA</value>
+        </equals>
+        <less-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>60</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+
+  <!-- Roues rentrées mode AVIA -->
+  <animation>
+    <type>select</type>
+    <object-name>portesfermeesAVIA</object-name>
+    <condition>
+      <and>
+        <equals>
+          <!-- <property>sim/model/mode</property> -->
+          <property>/ai/models/multiplayer/sim/multiplay/generic/string[0]</property>
+          <value>AVIA</value>
+        </equals>
+        <greater-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>59</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+</PropertyList>

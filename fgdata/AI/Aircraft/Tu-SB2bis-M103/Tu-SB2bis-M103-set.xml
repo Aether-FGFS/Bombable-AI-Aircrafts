@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/tu-sb.xml">
+
+  <model>
+    <path>AI/Aircraft/Tu-SB2bis-M103/Models/tu-sb.xml</path>
+  </model>
+
+</PropertyList>
