@@ -1,0 +1,1121 @@
+<?xml version="1.0"?>
+<!--
+Zeppelin LZ 121 "Nordstern" airship for FlightGear.
+
+Copyright (C) 2010 - 2015  Anders Gidenstam  (anders(at)gidenstam.org)
+This file is licensed under the GPL license version 2 or later.
+-->
+<PropertyList include="SL11-bombableinclude.xml">
+	
+	<path>SL11.ac</path>
+	<offsets>
+		<!-- x/y/z == back/right/up -->
+		<x-m> 0.0 </x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 0.0 </z-m>
+	</offsets>
+	
+	<animation>
+		<!-- Objets opaques -->
+		<object-name>HuelleAussen</object-name>
+		<object-name>UpperFin</object-name>
+		<object-name>LeftFin</object-name>
+		<object-name>RightFin</object-name>
+		<object-name>LowerFin</object-name>
+		<object-name>Rudder</object-name>
+		<object-name>LeftElevator</object-name>
+	</animation>
+	<!-- Rembrandt transparency markup. -->
+	<effect>
+		<inherits-from>Effects/glass</inherits-from>
+		<object-name>CabinWindows2</object-name>
+		<object-name>MotorCarAftWindow</object-name>
+		<object-name>MotorCarForeWindow</object-name>
+		<object-name>MotorCarLeftWindow</object-name>
+		<object-name>MotorCarRightWindow</object-name>
+	</effect>
+	
+	<animation>
+		<type>noshadow</type>
+		<object-name>CabinWindows2</object-name>
+		<object-name>MotorCarAftWindow</object-name>
+		<object-name>MotorCarForeWindow</object-name>
+		<object-name>MotorCarLeftWindow</object-name>
+		<object-name>MotorCarRightWindow</object-name>
+	</animation>
+
+	<!-- Volumetric shadow object =============================================-->
+	<!--
+	<model>
+	<name>shadow</name>
+	<path>Aircraft/SL11/Models/shadow.xml</path>
+	<offsets>
+	<x-m> 0.00 </x-m>
+	<y-m> 0.00 </y-m>
+	<z-m> 0.00 </z-m>
+	</offsets>
+	</model>
+	-->
+	<model>
+		<name>Control car interior</name>
+		<path>Aircraft/SL11/Models/SL11-interior.xml</path>
+		<offsets>
+			<x-m>  27.35 </x-m>
+			<y-m>   0.00 </y-m>
+			<z-m> -13.25 </z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Landig Light</name>
+		<path>Aircraft/SL11/Models/light/light-cone.xml</path>
+		<offsets>
+			<x-m>  27.86345 </x-m>
+			<y-m>   0.00 </y-m>
+			<z-m> -13.27375 </z-m>
+			<pitch-deg> -9.5 </pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Left propeller</name>
+		<path>Aircraft/SL11/Models/propeller5mfx.xml</path>
+		<offsets>
+			<x-m>  96.38556 </x-m>
+			<y-m> -8.19943 </y-m>
+			<z-m> -10.89965 </z-m>
+		</offsets>
+		<overlay>
+			<parameters>
+				<engine-rpm>engines/engine[0]/rpm</engine-rpm>
+				<engine-dir>fdm/jsbsim/propulsion/engine[0]/yaw-angle-rad</engine-dir>
+			</parameters>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>Right propeller</name>
+		<path>Aircraft/SL11/Models/propeller5mfx.xml</path>
+		<offsets>
+			<x-m>  96.38556 </x-m>
+			<y-m>   8.19943 </y-m>
+			<z-m> -10.89965 </z-m>
+		</offsets>
+		<overlay>
+			<parameters>
+				<engine-rpm>engines/engine[1]/rpm</engine-rpm>
+				<engine-dir>fdm/jsbsim/propulsion/engine[1]/yaw-angle-rad</engine-dir>
+			</parameters>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>Fore propeller</name>
+		<path>Aircraft/SL11/Models/propeller5mfx.xml</path>
+		<offsets>
+			<x-m>  46.81587 </x-m>
+			<y-m>   0.00 </y-m>
+			<z-m> -13.63739 </z-m>
+		</offsets>
+		<overlay>
+			<parameters>
+				<engine-rpm>engines/engine[2]/rpm</engine-rpm>
+			</parameters>
+		</overlay>
+	</model>
+	
+	<model>
+		<name>Aft propeller</name>
+		<path>Aircraft/SL11/Models/propeller5mfx.xml</path>
+		<offsets>
+			<x-m> 120.228 </x-m>
+			<y-m>   0.00 </y-m>
+			<z-m> -13.08162 </z-m>
+		</offsets>
+		<overlay>
+			<parameters>
+				<engine-rpm>engines/engine[3]/rpm</engine-rpm>
+			</parameters>
+		</overlay>
+	</model>
+	<model>
+		<object-name>Exhaust</object-name>
+		<path>Aircraft/SL11/Models/Effects/exhaust/exhaust2.xml</path>
+		<offsets>
+			<x-m>44.41467</x-m>
+			<y-m>0.83515</y-m>
+			<z-m>-14.84138</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<engine-throttle>controls/engines/engine[2]/throttle</engine-throttle>
+				<engine-running>engines/engine[2]/running</engine-running>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<object-name>Exhaust2</object-name>
+		<path>Aircraft/SL11/Models/Effects/exhaust/exhaust.xml</path>
+		<offsets>
+			<x-m>93.99657</x-m>
+			<y-m>-7.34461</y-m>
+			<z-m>-12.07761</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<engine-throttle>controls/engines/engine[0]/throttle</engine-throttle>
+				<engine-running>engines/engine[0]/running</engine-running>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<object-name>Exhaust3</object-name>
+		<path>Aircraft/SL11/Models/Effects/exhaust/exhaust1.xml</path>
+		<offsets>
+			<x-m>93.99657</x-m>
+			<y-m>9.01493</y-m>
+			<z-m>-12.07761</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<engine-throttle>controls/engines/engine[1]/throttle</engine-throttle>
+				<engine-running>engines/engine[1]/running</engine-running>
+			</params>
+		</overlay>
+	</model>
+	<model>
+		<object-name>Exhaust4</object-name>
+		<path>Aircraft/SL11/Models/Effects/exhaust/exhaust3.xml</path>
+		<offsets>
+			<x-m>117.83667</x-m>
+			<y-m>0.83516</y-m>
+			<z-m>-14.2821</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<engine-throttle>controls/engines/engine[3]/throttle</engine-throttle>
+				<engine-running>engines/engine[3]/running</engine-running>
+			</params>
+		</overlay>
+	</model>
+	
+	<!-- Control surface animations ===========================================-->
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Rudder</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor>20</factor>
+		<axis>
+			<x1-m> 167.03914 </x1-m>
+			<y1-m>   0.000 </y1-m>
+			<z1-m>  -9.47285 </z1-m>
+			<x2-m> 167.03914 </x2-m>
+			<y2-m>   0.000 </y2-m>
+			<z2-m>  10.6492 </z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>LeftElevator</object-name>
+		<property>surface-positions/elevator-pos-norm</property>
+		<factor>20</factor>
+		<axis>
+			<x1-m> 167.03914 </x1-m>
+			<y1-m> -11.13 </y1-m>
+			<z1-m>   0.00 </z1-m>
+			<x2-m> 167.03914 </x2-m>
+			<y2-m>  11.13 </y2-m>
+			<z2-m>   0.00 </z2-m>
+		</axis>
+	</animation>
+	
+	
+	<animation>
+		<type>translate</type>
+		<object-name>CoolerLeft</object-name>
+		<property>controls/engines/engine[0]/throttle</property>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<interpolation>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>0.0</ind>
+				<dep>-0.8</dep>
+			</entry>
+		</interpolation>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>CoolerRight</object-name>
+		<property>controls/engines/engine[1]/throttle</property>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<interpolation>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>0.0</ind>
+				<dep>-0.8</dep>
+			</entry>
+		</interpolation>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>CoolerFront</object-name>
+		<property>controls/engines/engine[2]/throttle</property>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<interpolation>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>0.0</ind>
+				<dep>-0.8</dep>
+			</entry>
+		</interpolation>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>CoolerBack</object-name>
+		<property>controls/engines/engine[3]/throttle</property>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+		<interpolation>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>0.0</ind>
+				<dep>-0.8</dep>
+			</entry>
+		</interpolation>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>BDoorFrontLeft</object-name>
+		<property>sim/model/door-positions/BDoor/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-90.0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>64.255</x1-m>
+			<y1-m>-1.745</y1-m>
+			<z1-m>-10.9251</z1-m>
+			<x2-m>67.745</x2-m>
+			<y2-m>-1.745</y2-m>
+			<z2-m>-10.93661</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>BDoorFrontRight</object-name>
+		<property>sim/model/door-positions/BDoor/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>90.0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>64.255</x1-m>
+			<y1-m>1.745</y1-m>
+			<z1-m>-10.9251</z1-m>
+			<x2-m>67.745</x2-m>
+			<y2-m>1.745</y2-m>
+			<z2-m>-10.93661</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>BDoorBackLeft</object-name>
+		<property>sim/model/door-positions/BDoor/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-90.0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>75.255</x1-m>
+			<y1-m>-1.745</y1-m>
+			<z1-m>-10.93516</z1-m>
+			<x2-m>78.745</x2-m>
+			<y2-m>-1.745</y2-m>
+			<z2-m>-10.92925</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>BDoorBackRight</object-name>
+		<property>sim/model/door-positions/BDoor/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>90.0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>75.255</x1-m>
+			<y1-m>1.745</y1-m>
+			<z1-m>-10.93516</z1-m>
+			<x2-m>78.745</x2-m>
+			<y2-m>1.745</y2-m>
+			<z2-m>-10.92925</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>BDoorBackLeft2</object-name>
+		<property>sim/model/door-positions/BDoor/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-90.0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>83.255</x1-m>
+			<y1-m>-1.745</y1-m>
+			<z1-m>-10.90912</z1-m>
+			<x2-m>86.745</x2-m>
+			<y2-m>-1.745</y2-m>
+			<z2-m>-10.88971</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>BDoorBackRight2</object-name>
+		<property>sim/model/door-positions/BDoor/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>90.0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>83.255</x1-m>
+			<y1-m>1.745</y1-m>
+			<z1-m>-10.90912</z1-m>
+			<x2-m>86.745</x2-m>
+			<y2-m>1.745</y2-m>
+			<z2-m>-10.88971</z2-m>
+		</axis>
+	</animation>
+	
+	<model>
+		<name>bomb.004</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>64.8</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.004</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[0]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	
+	<model>
+		<name>bomb.005</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>64.8</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.005</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[1]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.002</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>65.6</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.002</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[2]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.006</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>65.6</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.006</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[3]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.001</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>66.4</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.001</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[4]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.007</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>66.4</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.007</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[5]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.003</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>67.2</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.003</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[6]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.008</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>67.2</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.008</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[7]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.009</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>75.8</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.009</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[8]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.013</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>75.8</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.013</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[9]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.010</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>76.6</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.010</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[10]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.014</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>76.6</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.014</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[11]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.011</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>77.4</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.011</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[12]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.015</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>77.4</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.015</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[13]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.012</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>78.2</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.012</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[14]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.016</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>78.2</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.016</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[15]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.017</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>83.8</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.017</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[16]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.021</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>83.8</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.021</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[17]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.018</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>84.6</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.018</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[18]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.022</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>84.6</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.022</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[19]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.019</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>85.4</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.019</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[20]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.023</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>85.4</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.023</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[21]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.020</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>86.2</x-m>
+			<y-m> 0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.020</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[22]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bomb.024</name>
+		<path>Aircraft/SL11/Models/bombe.xml</path>
+		<offsets>
+			<x-m>86.2</x-m>
+			<y-m>-0.9</y-m>
+			<z-m>-9.57</z-m>
+		</offsets>
+	</model>
+	<animation>
+		<object-name>bomb.024</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/sim/weapons/bomb[23]/dropped</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>Top-MG</name>
+		<path>Aircraft/SL11/Models/bombable/mg.xml</path>
+		<offsets>
+			<x-m>17.4</x-m>
+			<y-m>-0.0</y-m>
+			<z-m> 9.6</z-m>
+		</offsets>
+	</model>
+	<model>
+		<name>Fore-MG1</name>
+		<path>Aircraft/SL11/Models/bombable/mg.xml</path>
+		<offsets>
+			<x-m>41.99119</x-m>
+			<y-m>-0.88209</y-m>
+			<z-m>-13.74201</z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Fore-MG2</name>
+		<path>Aircraft/SL11/Models/bombable/mg.xml</path>
+		<offsets>
+			<x-m>41.99119</x-m>
+			<y-m> 0.88209</y-m>
+			<z-m>-13.74201</z-m>
+			<heading-deg>-90.0</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Side-MG1</name>
+		<path>Aircraft/SL11/Models/bombable/mg.xml</path>
+		<offsets>
+			<x-m>91.5731</x-m>
+			<y-m>-9.06186</y-m>
+			<z-m>-10.97823</z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Side-MG2</name>
+		<path>Aircraft/SL11/Models/bombable/mg.xml</path>
+		<offsets>
+			<x-m>91.5731</x-m>
+			<y-m> 9.06186</y-m>
+			<z-m>-10.97823</z-m>
+			<heading-deg>-90.0</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Back-MG1</name>
+		<path>Aircraft/SL11/Models/bombable/mg.xml</path>
+		<offsets>
+			<x-m>115.4132</x-m>
+			<y-m>-0.88209</y-m>
+			<z-m>-13.18272</z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Back-MG2</name>
+		<path>Aircraft/SL11/Models/bombable/mg.xml</path>
+		<offsets>
+			<x-m>115.4132</x-m>
+			<y-m> 0.88209</y-m>
+			<z-m>-13.18272</z-m>
+			<heading-deg>-90.0</heading-deg>
+		</offsets>
+	</model>
+	<!-- LOD for model parts ==================================================-->
+	
+	<animation>
+		<type>range</type>
+		<object-name>Control car interior</object-name>
+		<min-m>0</min-m>
+		<max-m>1000</max-m>
+	</animation>
+	<!--
+	<animation>
+	<type>range</type>
+	<object-name>red_tent</object-name>
+	<object-name>red_tent_floor</object-name>
+	<object-name>engine_walk_way</object-name>
+	<object-name>fuel_tank</object-name>
+	<object-name>fuel_tank.001</object-name>
+	<object-name>fuel_tank.002</object-name>
+	<object-name>fuel_tank.003</object-name>
+	<object-name>fuel_tank.004</object-name>
+	<object-name>fuel_tank.005</object-name>
+	<object-name>fuel_tank.006</object-name>
+	<object-name>fuel_tank.007</object-name>
+	<object-name>fuel_tank.008</object-name>
+	<object-name>fuel_tank.009</object-name>
+	<object-name>fuel_tank.010</object-name>
+	<object-name>fuel_tank.011</object-name>
+	<min-m>0</min-m>
+	<max-m>150</max-m>
+	</animation>
+	
+	<animation>
+	<type>range</type>
+	<object-name>longitudal_girder.0</object-name>
+	<object-name>longitudal_girder.001</object-name>
+	<object-name>ring_girders</object-name>
+	<object-name>cell.1</object-name>
+	<object-name>cell.2</object-name>
+	<object-name>cell.3</object-name>
+	<object-name>cell.4</object-name>
+	<object-name>cell.5</object-name>
+	<object-name>cell.6</object-name>
+	<object-name>cell.7</object-name>
+	<object-name>cell.8</object-name>
+	<object-name>cell.9</object-name>
+	<object-name>cell.10</object-name>
+	<object-name>cell.11</object-name>
+	<object-name>cell.12</object-name>
+	<object-name>cell.13</object-name>
+	<min-m>0</min-m>
+	<max-m>1000</max-m>
+	</animation>
+	-->
+	
+	<animation>
+		<type>range</type>
+		<object-name>Left propeller</object-name>
+		<object-name>Right propeller</object-name>
+		<object-name>Fore propeller</object-name>
+		<object-name>Aft propeller</object-name>
+		<object-name>Top-MG</object-name>
+		<object-name>Fore-MG1</object-name>
+		<object-name>Fore-MG2</object-name>
+		<object-name>Side-MG1</object-name>
+		<object-name>Side-MG2</object-name>
+		<object-name>Back-MG1</object-name>
+		<object-name>Back-MG2</object-name>
+		<min-m>0</min-m>
+		<max-m>5000</max-m>
+	</animation>
+	
+	<!-- LOD for the model as a whole =========================================-->
+	
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>20000</max-m>
+	</animation>
+	<!--
+	<nasal>
+	<load>
+	##############################################################################
+	# The on-load Nasal is not executed when this file is loaded as the user
+	# aircraft.
+	##############################################################################
+	var rplayer = cmdarg();
+	print("LOAD Nordstern ", rplayer.getPath());
+	
+	############################################################
+	# Load the needed modules if it hasn't been done yet.
+	# The mooring system is provided by ZLT-NT.
+	#if (!contains(globals, "ZLTNT")) {
+	#  var file = "Aircraft/ZLT-NT/Systems/mp-network.nas";
+	#  io.load_nasal(resolvepath(file), "ZLTNT");
+	
+	# Use the minimal remote_mooring instead of mooring.
+	#  ZLTNT.mooring = ZLTNT.remote_mooring;
+	# Initialize scenario network as observer.
+	#  ZLTNT.mp_network_init(0);
+	}
+	##############################################################################
+	</load>
+	<unload>
+	##############################################################################
+	var rplayer = cmdarg();
+	print("UNLOAD Nordstern ", rplayer.getPath());
+	
+	# The mast truck is removed automatically. However, the the ZLTNT module
+	# itself should be shut down if this was its last user.
+	</unload>
+	</nasal>
+	-->
+</PropertyList>

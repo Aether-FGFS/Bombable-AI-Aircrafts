@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Nasal code -->
+  <nasal>
+
+    <load>
+      <![CDATA[
+
+      var nodeName = cmdarg().getPath();
+
+      print("Loading SL11 ", nodeName);
+
+      var nodeName = cmdarg().getPath();
+
+      if ( bombable.check_overall_initialized (nodeName) ) {
+        return;
+      }
+
+      var object_init = func() {
+        thisNodeName = cmdarg().getPath();
+
+        var bombableObject = {
+
+          objectNodeName : thisNodeName,
+          objectNode     : props.globals.getNode(thisNodeName),
+          updateTime_s   : 1/3,
+          altitudes : {
+            wheelsOnGroundAGL_m : 1,
+            minimumAGL_m        : 100,
+            maximumAGL_m        : 13715,
+            crashedAGL_m        : -30.6,
+          },
+          velocities : {
+            maxSpeedReduce_percent                       : 0.5,
+            minSpeed_kt                                  : 9,
+            cruiseSpeed_kt                               : 40,
+            attackSpeed_kt                               : 49,
+            maxSpeed_kt                                  : 49.5,
+            damagedAltitudeChangeMaxRate_meterspersecond : 2,
+
+            diveTerminalVelocities: {
+              point1: { airspeed_kt : 377, vertical_speed_fps : -2},
+              point2: { airspeed_kt : 416, vertical_speed_fps : -3},
+              point3: { airspeed_kt : 430, vertical_speed_fps : -6},
+              point4: { airspeed_kt : 547, vertical_speed_fps : -9},
+            },
+            climbTerminalVelocities: {
+              point1: { airspeed_kt : 344, vertical_speed_fps : 1.2},
+              point2: { airspeed_kt : 314, vertical_speed_fps : 3},
+              point3: { airspeed_kt : 297, vertical_speed_fps : 6},
+              point4: { airspeed_kt : 252, vertical_speed_fps : 9},
+            },
+          },
+          evasions : {
+            dodgeDelayMax_sec             : 15,
+            dodgeDelayMin_sec             : 5,
+            dodgeMax_deg                  : 3,
+            dodgeMin_deg                  : 1,
+            rollRateMax_degpersec         : 0.1,
+            dodgeROverLPreference_percent : 0,
+            dodgeAltMin_m                 : -5000,
+            dodgeAltMax_m                 : 5000,
+            dodgeVertSpeedClimb_mps       : 0.5,
+            dodgeVertSpeedDive_mps        : 0.8,
+          },
+          attacks : {
+            maxDistance_m              : 20000,
+            minDistance_m              : 1600,
+            continueAttackAngle_deg    : 8,
+            altitudeHigherCutoff_m     : 15000,
+            altitudeLowerCutoff_m      : 10000,
+            climbPower                 : 45,
+            divePower                  : 90,
+            rollMin_deg                : 3,
+            rollMax_deg                : 9,
+            rollRateMax_degpersec      : 5,
+            attackCheckTime_sec        : 6,
+            attackCheckTimeEngaged_sec : 0.6,
+          },
+          weapons : {
+            cannon_left : {
+              name                : "12.7 mm M2/AN Browning gun",
+              maxDamage_percent   : 18,
+              maxDamageDistance_m : 900,
+              weaponAngle_deg     : { heading: 90, elevation: 40 },
+              weaponOffset_m      : { x:-6.411, y:0.000, z:0.709 },
+              weaponSize_m        : { start: 0.05, end: 0.05 },
+            },
+            cannon_right : {
+              name                : "12.7 mm M2/AN Browning gun",
+              maxDamage_percent   : 18,
+              maxDamageDistance_m : 900,
+              weaponAngle_deg     : { heading: 260, elevation: -35 },
+              weaponOffset_m      : { x:-1.811, y:0.000, z:0.709 },
+              weaponSize_m        : { start: 0.05, end: 0.05 },
+            },
+            cannon_front : {
+              name                : "12.7 mm M2/AN Browning gun",
+              maxDamage_percent   : 18,
+              maxDamageDistance_m : 900,
+              weaponAngle_deg     : { heading: 0, elevation: 40 },
+              weaponOffset_m      : { x:-6.000, y:0.000, z:0.709 },
+              weaponSize_m        : { start: 0.05, end: 0.05 },
+            },
+            cannon_rear : {
+              name                : "12.7 mm M2/AN Browning gun",
+              maxDamage_percent   : 18,
+              maxDamageDistance_m : 900,
+              weaponAngle_deg     : { heading: 180, elevation: -35 },
+              weaponOffset_m      : { x:-1.000, y:0.000, z:0.709 },
+              weaponSize_m        : { start: 0.1, end: 0.1 },
+            },
+          },
+          dimensions : {
+            width_m             : 20.1,
+            length_m            : 174.0,
+            height_m            : 27.0,
+            damageRadius_m      : 50,
+            vitalDamageRadius_m : 25,
+            crashRadius_m       : 15,
+          },
+          vulnerabilities : {
+            engineDamageVulnerability_percent    : 7,
+            fireVulnerability_percent            : 15,
+            fireDamageRate_percentpersecond      : 0.5,
+            damageVulnerability                  : 3.5,
+            fireExtinguishSuccess_percentage     : 23,
+            fireExtinguishMaxTime_seconds        : 30,
+            explosiveMass_kg                     : 735,
+            airspeed_damage:{
+              damage_threshold_kt                : 450,
+              warning_threshold_kt               : 420,
+              damage_multiplier_percentpersecond : 0.5
+            },
+            gforce_damage: {
+              damage_enabled                     : 1,
+              warning_enabled                    : 1,
+              damage_threshold_g                 : {positive:15.6, negative:10},
+              warning_threshold_g                : {positive:12, negative:8},
+              damage_multiplier_percentpersecond : {positive:12, negative:12 }
+            },
+            redout: {
+              enabled                            : 1,
+              parameters: {
+                blackout_onset_g                 : 5,
+                blackout_complete_g              : 9,
+                redout_onset_g                   : -2.5,
+                redout_complete_g                : -5
+              }
+            }
+          },
+          damageLiveries : {
+            damageLivery : [  ]
+          },
+        };
+        bombable.initialize ( bombableObject );
+        # bombable.location_init ( thisNodeName );
+        bombable.ground_init ( thisNodeName );
+        bombable.attack_init ( thisNodeName );
+        bombable.weapons_init ( thisNodeName );
+        bombable.bombable_init ( thisNodeName );
+        bombable.startSmoke("pistonexhaust", thisNodeName );
+      }
+      object_init();
+      ]]>
+    </load>
+    <unload>
+      <![CDATA[
+      print("Unload SL11.");
+      var nodeName= cmdarg().getPath();
+      bombable.de_overall_initialize( nodeName );
+      bombable.initialize_del( nodeName );
+      bombable.ground_del( nodeName );
+      bombable.location_del (nodeName);
+      bombable.bombable_del( nodeName );
+      bombable.attack_del( nodeName );
+      bombable.weapons_del (nodeName);
+    ]]>
+    </unload>
+  </nasal>
+
+</PropertyList>

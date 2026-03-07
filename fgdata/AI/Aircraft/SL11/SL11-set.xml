@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/SL11.xml">
+
+  <model>
+    <path>AI/Aircraft/SL11/Models/SL11.xml</path>
+  </model>
+
+</PropertyList>

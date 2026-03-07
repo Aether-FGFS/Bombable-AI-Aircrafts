@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<!--
+Zeppelin LZ 121 "Nordstern" airship for FlightGear.
+
+Copyright (C) 2010 - 2015  Anders Gidenstam  (anders(at)gidenstam.org)
+This file is licensed under the GPL license version 2 or later.
+-->
+<PropertyList>
+	
+	<path>interior.ac</path>
+	<offsets>
+		<!-- x/y/z == back/right/up -->
+		<x-m>   0.0 </x-m>
+		<y-m>   0.0 </y-m>
+		<z-m>   0.0 </z-m>
+	</offsets>
+	
+	<!-- Alpha-test for opaque alpha textured objects.
+	<effect>
+	<inherits-from>Models/Effects/opaque-alpha-test</inherits-from>
+	<object-name>car_girders</object-name>
+	<object-name>car_hgirders</object-name>
+	</effect>
+	-->
+	<model>
+		<name>Rudder wheel</name>
+		<path>Aircraft/SL11/Models/wheel.ac</path>
+		<offsets>
+			<!-- x/y/z == back/right/up -->
+			<x-m>  0.66 </x-m>
+			<y-m>  0.40 </y-m>
+			<z-m>  1.22 </z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Rudder Man</name>
+		<path>Aircraft/SL11/Models/GroundCrew/crew.xml</path>
+		<offsets>
+			<x-m>  1.00 </x-m>
+			<y-m>  0.4 </y-m>
+			<z-m>  0.2 </z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Magnetic compass</name>
+		<path>Aircraft/SL11/Instruments/MagneticCompass/compass.xml</path>
+		<offsets>
+			<!-- x/y/z == back/right/up -->
+			<!--   <x-m>  0.40 </x-m>
+			<y-m>  0.60 </y-m> -->
+			<x-m>  0.40 </x-m>
+			<y-m>  0.34 </y-m>
+			<z-m>  1.26397 </z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Hase variometer</name>
+		<path>Aircraft/SL11/Instruments/Variometer/variometer.xml</path>
+		<offsets>
+			<!-- x/y/z == back/right/up -->
+			<x-m>  2.06416 </x-m>
+			<y-m>  1.19564 </y-m>
+			<z-m>  1.81325 </z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Watch Officer</name>
+		<path>Aircraft/SL11/Models/GroundCrew/crew.xml</path>
+		<offsets>
+			<x-m>  2.65 </x-m>
+			<y-m>  0.15 </y-m>
+			<z-m>  0.2 </z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Elevator wheel</name>
+		<path>Aircraft/SL11/Models/wheel.ac</path>
+		<offsets>
+			<x-m>  3.30 </x-m>
+			<y-m> -0.95 </y-m>
+			<z-m>  1.22 </z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Elevator Man</name>
+		<path>Aircraft/SL11/Models/GroundCrew/crew.xml</path>
+		<offsets>
+			<x-m>  3.3 </x-m>
+			<y-m> -0.65 </y-m>
+			<z-m>  0.2 </z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Altimeter</name>
+		<path>Aircraft/SL11/Instruments/Airspeed/asi.xml</path>
+		<offsets>
+			<x-m>  2.15796 </x-m>
+			<y-m>  1.29278 </y-m>
+			<z-m>  1.25749 </z-m>
+			<heading-deg>140.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Altimeter2</name>
+		<path>Aircraft/SL11/Instruments/Altimeter/alt.xml</path>
+		<offsets>
+			<x-m>  2.80506 </x-m>
+			<y-m> -1.26388 </y-m>
+			<z-m>  1.25749 </z-m>
+			<heading-deg>230.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>MachineTelegraph</name>
+		<path>Aircraft/SL11/Instruments/MTelegraph/telegraf.xml</path>
+		<offsets>
+			<x-m>  3.02869 </x-m>
+			<y-m>  1.35484 </y-m>
+			<z-m>  1.26136 </z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Machinist</name>
+		<path>Aircraft/SL11/Models/GroundCrew/crew.xml</path>
+		<offsets>
+			<x-m>  3.35 </x-m>
+			<y-m>  0.72 </y-m>
+			<z-m>  0.2 </z-m>
+			<heading-deg>-90.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>5deg inclinometer</name>
+		<path>Aircraft/SL11/Instruments/Inclinometers/inclinometer_5deg.xml</path>
+		<offsets>
+			<x-m>  3.29713 </x-m>
+			<y-m> -1.27017 </y-m>
+			<z-m>  1.38492 </z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>20deg inclinometer</name>
+		<path>Aircraft/SL11/Instruments/Inclinometers/inclinometer_20deg.xml</path>
+		<offsets>
+			<x-m>  3.29713 </x-m>
+			<y-m> -1.27017 </y-m>
+			<z-m>  1.49614 </z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Gas and ballast board</name>
+		<path>Aircraft/SL11/Instruments/GasAndBallastBoard/gas_and_ballast_board.xml</path>
+		<offsets>
+			<x-m>  3.32469 </x-m>
+			<y-m> -1.28639 </y-m>
+			<z-m>  1.78309 </z-m>
+			<heading-deg>186.142</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Bomb board</name>
+		<path>Aircraft/SL11/Instruments/BombPanel/bombpanel.xml</path>
+		<offsets>
+			<x-m>  0.18295 </x-m>
+			<y-m> -0.07059 </y-m>
+			<z-m>  1.26314 </z-m>
+			<heading-deg>180.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Bomber Man</name>
+		<path>Aircraft/SL11/Models/GroundCrew/crew.xml</path>
+		<offsets>
+			<x-m>  0.82 </x-m>
+			<y-m> -0.62179 </y-m>
+			<z-m>  0.2 </z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Bombsight</name>
+		<path>Aircraft/SL11/Instruments/Sight/sight.xml</path>
+		<offsets>
+			<x-m>  0.23954 </x-m>
+			<y-m> -0.62179 </y-m>
+			<z-m>  1.26394 </z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Lightswitch</name>
+		<path>Aircraft/SL11/Instruments/Knob/knob.xml</path>
+		<offsets>
+			<!--   <x-m>  0.14 </x-m>
+			<y-m>  0.19 </y-m> -->
+			<x-m>  0.28 </x-m>
+			<y-m>  0.90 </y-m>
+			<z-m>  1.265 </z-m>
+			<heading-deg>180.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Landingswitch</name>
+		<path>Aircraft/SL11/Instruments/Knob/knob2.xml</path>
+		<offsets>
+			<!--   <x-m>  0.14 </x-m>
+			<y-m>  0.23 </y-m> -->
+			<x-m>  0.28 </x-m>
+			<y-m>  0.94 </y-m>
+			<z-m>  1.265 </z-m>
+			<heading-deg>180.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<!--
+	<animation>
+	<type>pick</type>
+	<object-name>ladder</object-name>
+	<action>
+	<button>0</button>
+	<repeatable>false</repeatable>
+	<binding>
+	<command>nasal</command>
+	<script>Nordstern.climbLadder();</script>
+	</binding>
+	</action>
+	</animation>
+	-->
+	<animation>
+		<type>rotate</type>
+		<object-name>Rudder wheel</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor>-250.0</factor>
+		<center>
+			<x-m>  0.66 </x-m>
+			<y-m>  0.40 </y-m>
+			<z-m>  1.22 </z-m>
+		</center>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Elevator wheel</object-name>
+		<property>surface-positions/elevator-pos-norm</property>
+		<factor>-250.0</factor>
+		<axis>
+			<x1-m>  3.30 </x1-m>
+			<y1-m> -1.00 </y1-m>
+			<z1-m>  1.22 </z1-m>
+			<x2-m>  3.30 </x2-m>
+			<y2-m> -0.90 </y2-m>
+			<z2-m>  1.22 </z2-m>
+		</axis>
+	</animation>
+	
+</PropertyList>
