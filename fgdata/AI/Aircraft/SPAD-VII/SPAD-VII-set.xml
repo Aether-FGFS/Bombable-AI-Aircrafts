@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/spadvii.xml">
+
+  <model>
+    <path>AI/Aircraft/SPAD-VII/Models/spadvii.xml</path>
+  </model>
+
+</PropertyList>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Nasal code -->
+  <nasal>
+
+    <load>
+      <![CDATA[
+      var nodeName = cmdarg().getPath();
+
+      print("Loading S.P.A.D. VII ", nodeName);
+
+      if ( bombable.check_overall_initialized (nodeName) ) {
+        return;
+      }
+
+      var object_init = func() {
+        thisNodeName = cmdarg().getPath();
+
+        var bombableObject = {
+
+          objectNodeName : thisNodeName,
+          objectNode     : props.globals.getNode(thisNodeName),
+          updateTime_s   : 1/3,
+
+          altitudes : {
+            wheelsOnGroundAGL_m : 1,
+            minimumAGL_m        : 33,
+            maximumAGL_m        : 5000,
+            crashedAGL_m        : -0.85,
+          },
+          velocities : {
+            maxSpeedReduce_percent                       : 0.5,
+            minSpeed_kt                                  : 48,
+            cruiseSpeed_kt                               : 97,
+            attackSpeed_kt                               : 113.4,
+            maxSpeed_kt                                  : 223,
+            damagedAltitudeChangeMaxRate_meterspersecond : 30,
+
+            diveTerminalVelocities: {
+                point1: { airspeed_kt : 122.3, vertical_speed_fps : - 9.8},
+                point2: { airspeed_kt : 130,   vertical_speed_fps : - 20.1},
+                point3: { airspeed_kt : 136.5, vertical_speed_fps : - 33.4},
+                point4: { airspeed_kt : 142.6, vertical_speed_fps : - 47.2},
+                point4: { airspeed_kt : 154.2, vertical_speed_fps : - 77.2},
+                point4: { airspeed_kt : 166.1, vertical_speed_fps : - 110.3},
+                point4: { airspeed_kt : 175.8, vertical_speed_fps : - 144.4},
+                point4: { airspeed_kt : 187.4, vertical_speed_fps : - 200.3},
+                point4: { airspeed_kt : 223.4, vertical_speed_fps : - 388},
+            },
+            climbTerminalVelocities: {
+              point1: { airspeed_kt : 105.4, vertical_speed_fps : 7.77},
+              point2: { airspeed_kt :  93.7, vertical_speed_fps : 13.4},
+              point3: { airspeed_kt :  82.9, vertical_speed_fps : 17.8},
+              point4: { airspeed_kt :  72.8, vertical_speed_fps : 19.5},
+              point5: { airspeed_kt :  63.0, vertical_speed_fps : 17.4},
+            },
+          },
+          evasions : {
+            dodgeDelayMax_sec             : 15,
+            dodgeDelayMin_sec             : 2,
+            dodgeMax_deg                  : 75,
+            dodgeMin_deg                  : 70,
+            rollRateMax_degpersec         : 49,
+            dodgeROverLPreference_percent : 80,
+            dodgeAltMin_m                 : -150,
+            dodgeAltMax_m                 : 75,
+            dodgeVertSpeedClimb_mps       : 12,
+            dodgeVertSpeedDive_mps        : 75,
+          },
+          attacks : {
+            maxDistance_m              : 4200,
+            minDistance_m              : 120,
+            continueAttackAngle_deg    : 75,
+            altitudeHigherCutoff_m     : 5200,
+            altitudeLowerCutoff_m      : 650,
+            climbPower                 : 1550,
+            divePower                  : 4400,
+            rollMin_deg                : 69,
+            rollMax_deg                : 75,
+            rollRateMax_degpersec      : 49,
+            attackCheckTime_sec        : 10,
+            attackCheckTimeEngaged_sec : 1.1,
+          },
+          weapons : {
+            cannon :   {
+              name                : "7.7mm Vickers Machine Gun",
+              maxDamage_percent   : 5.5,
+              maxDamageDistance_m : 550,
+              weaponAngle_deg     : { heading: 0, elevation: 0 },
+              weaponOffset_m      : { x:2, y:0, z:0 },
+              weaponSize_m        : { start:0.15, end:0.15 },
+            },
+          },
+          dimensions : {
+            width_m             : 7.822,
+            length_m            : 6.08,
+            height_m            : 2.20,
+            damageRadius_m      : 3.04,
+            vitalDamageRadius_m : 0.9,
+            crashRadius_m       : 6,
+          },
+          vulnerabilities: {
+            engineDamageVulnerability_percent    : 3,
+            fireVulnerability_percent            : 20,
+            fireDamageRate_percentpersecond      : 0.2,
+            damageVulnerability                  : 4,
+            fireExtinguishSuccess_percentage     : 10,
+            fireExtinguishMaxTime_seconds        : 100,
+            explosiveMass_kg                     : 735,
+            airspeed_damage:{
+              damage_threshold_kt                : 290,
+              warning_threshold_kt               : 260,
+              damage_multiplier_percentpersecond : 0.4
+            },
+            gforce_damage: {
+              damage_enabled                     : 1,
+              warning_enabled                    : 1,
+              damage_threshold_g                 : { positive:4.5, negative:3.0 },
+              warning_threshold_g                : { positive:3.0, negative:2.5 },
+              damage_multiplier_percentpersecond : { positive:9.0, negative:9.0 }
+            },
+            redout: {
+              enabled                            : 1,
+              parameters: {
+                blackout_onset_g                 : 3,
+                blackout_complete_g              : 7,
+                redout_onset_g                   : -2,
+                redout_complete_g                : -5
+              }
+            }
+          },
+          damageLiveries : {
+            damageLivery : [  ]
+          },
+        };
+        bombable.initialize ( bombableObject );
+        # bombable.location_init ( thisNodeName );
+        bombable.ground_init ( thisNodeName );
+        bombable.attack_init ( thisNodeName );
+        bombable.weapons_init ( thisNodeName );
+        bombable.bombable_init ( thisNodeName );
+        bombable.startSmoke("jetcontrail", thisNodeName );
+      }
+      object_init();
+      ]]>
+    </load>
+    <unload>
+      <![CDATA[
+        print("Unload S.P.A.D. VII");
+        var nodeName= cmdarg().getPath();
+        bombable.de_overall_initialize( nodeName );
+        bombable.initialize_del( nodeName );
+        bombable.ground_del( nodeName );
+        bombable.location_del (nodeName);
+        bombable.bombable_del( nodeName );
+        bombable.attack_del( nodeName );
+        bombable.weapons_del (nodeName);
+      ]]>
+    </unload>
+  </nasal>
+
+</PropertyList>
