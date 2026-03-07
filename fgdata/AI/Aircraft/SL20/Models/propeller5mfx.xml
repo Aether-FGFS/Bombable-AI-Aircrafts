@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!--
+Zeppelin LZ 121 "Nordstern" airship for FlightGear.
+
+Copyright (C) 2010 - 2012  Anders Gidenstam  (anders(at)gidenstam.org)
+This file is licensed under the GPL license version 2 or later.
+-->
+<PropertyList>
+	
+	<parameters>
+		<engine-rpm>engines/engine[0]/rpm</engine-rpm>
+		<engine-dir>fdm/jsbsim/propulsion/engine[2]/yaw-angle-rad</engine-dir>
+	</parameters>
+	
+	<!--
+	The propeller. Model and animations based on the Vickers Vimy
+	by Emmanuel BARANGER.
+	-->
+	<path>propeller5mfx.ac</path>
+	<offsets>
+		<!-- x/y/z == back/right/up -->
+		<x-m> 0.0 </x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 0.0 </z-m>
+	</offsets>
+	
+	<!-- Rembrandt transparency markup. -->
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>PropBlur</object-name>
+		<object-name>PropDisc</object-name>
+	</effect>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>Propeller</object-name>
+		<object-name>Hub</object-name>
+		<object-name>drive_shaft</object-name>
+		<object-name>PropBlur</object-name>
+            <object-name>PropDisc</object-name>
+		<property alias="../../parameters/engine-rpm"/>
+		<condition>
+			<greater-than>
+				<property alias="../../../../parameters/engine-dir"/>
+				<value>0</value>
+			</greater-than>
+		</condition>
+		<factor>-1.0</factor>
+		<center>
+			<x-m> 0.0 </x-m>
+			<y-m> 0.0 </y-m>
+			<z-m> 0.0 </z-m>
+		</center>
+		<axis>
+			<x> 1.0 </x>
+			<y> 0.0 </y>
+			<z> 0.0 </z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>Propeller</object-name>
+		<object-name>Hub</object-name>
+		<object-name>drive_shaft</object-name>
+		<object-name>PropBlur</object-name>
+            <object-name>PropDisc</object-name>
+		<property alias="../../parameters/engine-rpm"/>
+		<condition>
+			<equals>
+				<property alias="../../../../parameters/engine-dir"/>
+				<value>0</value>
+			</equals>
+		</condition>
+		<factor>1.0</factor>
+		<center>
+			<x-m> 0.0 </x-m>
+			<y-m> 0.0 </y-m>
+			<z-m> 0.0 </z-m>
+		</center>
+		<axis>
+			<x> 1.0 </x>
+			<y> 0.0 </y>
+			<z> 0.0 </z>
+		</axis>
+	</animation>
+
+   	<animation>
+		<type>select</type>
+		<object-name>Propeller</object-name>
+		<condition>
+			<less-than>
+				<property alias="../../../../parameters/engine-rpm"/>
+				<value>170</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>PropDisc</object-name>
+		<condition>
+			<greater-than>
+				<property alias="../../../../parameters/engine-rpm"/>
+				<value>300</value>
+			</greater-than>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>PropBlur</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property alias="../../../../../parameters/engine-rpm"/>
+					<value>100.000</value>
+				</greater-than>
+				<less-than>
+					<property alias="../../../../../parameters/engine-rpm"/>
+					<value>300.01</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+</PropertyList>

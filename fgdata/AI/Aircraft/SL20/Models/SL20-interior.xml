@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<!--
+Zeppelin LZ 121 "Nordstern" airship for FlightGear.
+
+Copyright (C) 2010 - 2015  Anders Gidenstam  (anders(at)gidenstam.org)
+This file is licensed under the GPL license version 2 or later.
+-->
+<PropertyList>
+	
+	<path>interior.ac</path>
+	<offsets>
+		<x-m>   0.0 </x-m>
+		<y-m>   0.0 </y-m>
+		<z-m>   0.0 </z-m>
+	</offsets>
+	
+	<!-- Alpha-test for opaque alpha textured objects.
+	<effect>
+	<inherits-from>Models/Effects/opaque-alpha-test</inherits-from>
+	<object-name>car_girders</object-name>
+	<object-name>car_hgirders</object-name>
+	</effect>
+	-->
+
+	<model>
+		<name>Rudder wheel</name>
+		<path>Aircraft/SL20/Models/wheel.ac</path>
+		<offsets>
+			<x-m>  0.67276 </x-m>
+			<y-m>  0.16172 </y-m>
+			<z-m> -0.07993 </z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Rudder Man</name>
+		<path>Aircraft/SL20/Models/GroundCrew/crew.xml</path>
+		<offsets>
+			<x-m>  1.01 </x-m>
+			<y-m>  0.16 </y-m>
+			<z-m> -0.97 </z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Magnetic compass</name>
+		<path>Aircraft/SL20/Instruments/MagneticCompass/compass.xml</path>
+		<offsets>
+			<x-m>  0.33571 </x-m>
+			<y-m>  0.49622 </y-m>
+			<z-m>  0.00814 </z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Hase variometer</name>
+		<path>Aircraft/SL20/Instruments/Variometer/variometer.xml</path>
+		<offsets>
+			<x-m>  1.79748 </x-m>
+			<y-m> -0.86595 </y-m>
+			<z-m>  0.65565 </z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Watch Officer</name>
+		<path>Aircraft/SL20/Models/GroundCrew/crew.xml</path>
+		<offsets>
+			<x-m>  1.01 </x-m>
+			<y-m> -0.53 </y-m>
+			<z-m> -0.97 </z-m>
+			<heading-deg>36.0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Elevator wheel</name>
+		<path>Aircraft/SL20/Models/wheel.ac</path>
+		<offsets>
+			<x-m>  1.61603 </x-m>
+			<y-m> -0.94072 </y-m>
+			<z-m> -0.07993 </z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Elevator Man</name>
+		<path>Aircraft/SL20/Models/GroundCrew/crew.xml</path>
+		<offsets>
+			<x-m>  1.61603 </x-m>
+			<y-m> -0.54 </y-m>
+			<z-m> -0.97 </z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Altimeter</name>
+		<path>Aircraft/SL20/Instruments/Airspeed/asi.xml</path>
+		<offsets>
+			<x-m>  1.44703 </x-m>
+			<y-m>  1.02676 </y-m>
+			<z-m>  0.0095 </z-m>
+			<heading-deg>158.0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Altimeter2</name>
+		<path>Aircraft/SL20/Instruments/Altimeter/alt.xml</path>
+		<offsets>
+			<x-m>  1.2489 </x-m>
+			<y-m> -1.00404 </y-m>
+			<z-m>  0.0095 </z-m>
+			<heading-deg>253.0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>MachineTelegraph</name>
+		<path>Aircraft/SL20/Instruments/MTelegraph/telegraf.xml</path>
+		<offsets>
+			<x-m>  1.98419 </x-m>
+			<y-m>  1.05907 </y-m>
+			<z-m>  0.01371 </z-m>
+			<heading-deg> -14.0 </heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Machinist</name>
+		<path>Aircraft/SL20/Models/GroundCrew/crew.xml</path>
+		<offsets>
+			<x-m>  2.10 </x-m>
+			<y-m>  0.35 </y-m>
+			<z-m> -0.97 </z-m>
+			<heading-deg>-90.0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>5deg inclinometer</name>
+		<path>Aircraft/SL20/Instruments/Inclinometers/inclinometer_5deg.xml</path>
+		<offsets>
+			<x-m>  1.61584 </x-m>
+			<y-m> -1.04736 </y-m>
+			<z-m>  0.11538 </z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>20deg inclinometer</name>
+		<path>Aircraft/SL20/Instruments/Inclinometers/inclinometer_20deg.xml</path>
+		<offsets>
+			<x-m>  1.61584 </x-m>
+			<y-m> -1.04736 </y-m>
+			<z-m>  0.17538 </z-m>
+			<heading-deg>90.0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Gas and ballast board</name>
+		<path>Aircraft/SL20/Instruments/GasAndBallastBoard/gas_and_ballast_board.xml</path>
+		<offsets>
+			<x-m>  0.0 </x-m>
+			<y-m>  0.0 </y-m>
+			<z-m>  0.0 </z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Bomb board</name>
+		<path>Aircraft/SL20/Instruments/BombPanel/bombpanel.xml</path>
+		<offsets>
+			<x-m>  0.37372 </x-m>
+			<y-m> -0.37459 </y-m>
+			<z-m>  0.01306 </z-m>
+			<heading-deg>195.0</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>Bombsight</name>
+		<path>Aircraft/SL20/Instruments/Sight/sight.xml</path>
+		<offsets>
+			<x-m>  0.52891 </x-m>
+			<y-m> -0.69634 </y-m>
+			<z-m>  0.01274 </z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Lightswitch</name>
+		<path>Aircraft/SL20/Instruments/Knob/knob.xml</path>
+		<offsets>
+			<x-m>  0.12 </x-m>
+			<y-m>  0.32 </y-m>
+			<z-m>  0.01662 </z-m>
+			<heading-deg>180.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Landingswitch</name>
+		<path>Aircraft/SL20/Instruments/Knob/knob2.xml</path>
+		<offsets>
+			<x-m>  0.12 </x-m>
+			<y-m>  0.29 </y-m>
+			<z-m>  0.01662 </z-m>
+			<heading-deg>180.0</heading-deg>
+		</offsets>
+	</model>
+
+	<!--
+	<animation>
+	<type>pick</type>
+	<object-name>ladder</object-name>
+	<action>
+	<button>0</button>
+	<repeatable>false</repeatable>
+	<binding>
+	<command>nasal</command>
+	<script>Nordstern.climbLadder();</script>
+	</binding>
+	</action>
+	</animation>
+	-->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Rudder wheel</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor>-250.0</factor>
+		<center>
+			<x-m>  0.67276 </x-m>
+			<y-m>  0.16172 </y-m>
+			<z-m> -0.07993 </z-m>
+		</center>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>Elevator wheel</object-name>
+		<property>surface-positions/elevator-pos-norm</property>
+		<factor>-250.0</factor>
+		<center>
+			<x-m>  1.61603 </x-m>
+			<y-m> -0.94072 </y-m>
+			<z-m> -0.07993 </z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+</PropertyList>
