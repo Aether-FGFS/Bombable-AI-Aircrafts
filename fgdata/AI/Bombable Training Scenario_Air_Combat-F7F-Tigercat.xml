@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <scenario>
+
+    <description>F7F-Tigercat Training scenario.  Starts at KSFO! </description>
+
+    <entry>
+      <type>aircraft</type>
+      <callsign>Stoner</callsign>
+      <name>F7F Leader</name>
+      <model     type="string">Aircraft/F7F-Tigercat/Models/f7f.xml</model>
+      <latitude  type="double">37.608720</latitude>
+      <longitude type="double">-122.3076</longitude>
+      <altitude  type="double">3500</altitude>
+      <speed>370.0</speed>
+      <heading   type="double">192</heading>
+    </entry>
+
+    <entry>
+      <type>aircraft</type>
+      <callsign>Tex</callsign>
+      <name>F7F Wingman</name>
+      <model     type="string">Aircraft/F7F-Tigercat/Models/f7f.xml</model>
+      <latitude  type="double">37.608200</latitude>
+      <longitude type="double">-122.2988</longitude>
+      <altitude  type="double">3500</altitude>
+      <speed>370.0</speed>
+      <heading   type="double">192</heading>
+    </entry>
+
+  </scenario>
+
+</PropertyList>

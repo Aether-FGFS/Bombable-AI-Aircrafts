@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <scenario>
+
+    <description>LZ-129 Training scenario.  Starts at KSFO! </description>
+
+    <entry>
+      <type>aircraft</type>
+      <callsign>LZ-129</callsign>
+      <name>LZ-129 Leader</name>
+      <model     type="string">Aircraft/LZ-129/Models/AI_LZ-129_moored.xml</model>
+      <latitude  type="double">37.608720</latitude>
+      <longitude type="double">-122.3076</longitude>
+      <altitude  type="double">3500</altitude>
+      <speed>76.0</speed>
+      <heading   type="double">192</heading>
+    </entry>
+
+
+
+  </scenario>
+
+</PropertyList>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <scenario>
+
+    <description>Fokker-Eindecker-EIII Training scenario.  Starts at KSFO! </description>
+
+    <entry>
+      <type>aircraft</type>
+      <callsign>Immelmann</callsign>
+      <name>Fokker-Eindecker-EIII Leader</name>
+      <model     type="string">Aircraft/Fokker-Eindecker-EIII/Models/eiii.xml</model>
+      <latitude  type="double">37.608720</latitude>
+      <longitude type="double">-122.3076</longitude>
+      <altitude  type="double">3500</altitude>
+      <speed>76.0</speed>
+      <heading   type="double">192</heading>
+    </entry>
+
+    <entry>
+      <type>aircraft</type>
+      <callsign>Blue Max</callsign>
+      <name>Fokker-Eindecker-EIII Wingman</name>
+      <model     type="string">Aircraft/Fokker-Eindecker-EIII/Models/eiii.xml</model>
+      <latitude  type="double">37.608200</latitude>
+      <longitude type="double">-122.2988</longitude>
+      <altitude  type="double">3500</altitude>
+      <speed>76.0</speed>
+      <heading   type="double">192</heading>
+    </entry>
+
+  </scenario>
+
+</PropertyList>
