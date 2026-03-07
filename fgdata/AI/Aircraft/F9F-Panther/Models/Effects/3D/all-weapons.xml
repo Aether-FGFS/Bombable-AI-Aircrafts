@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- MK 83 -->
+  <model>
+    <path>mk-83/mk-83.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -1.851 </y-m>
+      <z-m> -1.336 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>mk-83/mk-83.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  1.851 </y-m>
+      <z-m> -1.336 </z-m>
+    </offsets>
+  </model>
+
+  <!-- AIM 9 -->
+  <model>
+    <path>rocket127mm/rocket127mm.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -2.335 </y-m>
+      <z-m> -1.192 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>rocket127mm/rocket127mm.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -2.775 </y-m>
+      <z-m> -1.138 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>rocket127mm/rocket127mm.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -3.196 </y-m>
+      <z-m> -1.098 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>rocket127mm/rocket127mm.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  3.196 </y-m>
+      <z-m> -1.098 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>rocket127mm/rocket127mm.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  2.775 </y-m>
+      <z-m> -1.138 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>rocket127mm/rocket127mm.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  2.335 </y-m>
+      <z-m> -1.192 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
