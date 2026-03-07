@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left engine -->
+  <model>
+    <path>engine.xml</path>
+    <offsets>
+      <x-m> -2.90000 </x-m>
+      <y-m> -2.16000 </y-m>
+      <z-m>  0.31978 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right engine -->
+  <model>
+    <path>engine.xml</path>
+    <offsets>
+      <x-m> -2.90000 </x-m>
+      <y-m>  2.16000 </y-m>
+      <z-m>  0.31978 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

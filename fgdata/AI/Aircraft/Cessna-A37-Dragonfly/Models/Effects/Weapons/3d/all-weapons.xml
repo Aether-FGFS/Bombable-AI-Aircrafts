@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Auxiliary Tanks -->
+  <model>
+    <name>Tank-L1</name>
+    <path>Tank.xml</path>
+    <offsets>
+      <x-m> -0.95305 </x-m>
+      <y-m> -3.74557 </y-m>
+      <z-m> -0.70272 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Tank-L2</name>
+    <path>Tank.xml</path>
+    <offsets>
+      <x-m> -0.95305 </x-m>
+      <y-m> -3.07669 </y-m>
+      <z-m> -0.75272 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Tank-R1</name>
+    <path>Tank.xml</path>
+    <offsets>
+      <x-m> -0.95305 </x-m>
+      <y-m>  3.74557 </y-m>
+      <z-m> -0.70272 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Tank-R2</name>
+    <path>Tank.xml</path>
+    <offsets>
+      <x-m> -0.95305 </x-m>
+      <y-m>  3.07669 </y-m>
+      <z-m> -0.75272 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>Tank-L1</object-name>
+    <object-name>Tank-R1</object-name>
+    <condition>
+      <!-- <property>sim/model/show-tank1</property> -->
+      <property>/ai/models/multiplayer/sim/multiplay/generic/bool[17]</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Tank-L2</object-name>
+    <object-name>Tank-R2</object-name>
+    <condition>
+      <!-- <property>sim/model/show-tank2</property> -->
+      <property>/ai/models/multiplayer/sim/multiplay/generic/bool[18]</property>
+    </condition>
+  </animation>
+
+  <!-- SUU 12 Guns pod -->
+  <model>
+    <name>Suu12-L1</name>
+    <path>suu12.xml</path>
+    <offsets>
+      <x-m> -0.88160 </x-m>
+      <y-m> -3.74557 </y-m>
+      <z-m> -0.78572 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Suu12-L2</name>
+    <path>suu12.xml</path>
+    <offsets>
+      <x-m> -0.95305 </x-m>
+      <y-m> -3.07669 </y-m>
+      <z-m> -0.83672 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Suu12-R2</name>
+    <path>suu12.xml</path>
+    <offsets>
+      <x-m> -0.95305 </x-m>
+      <y-m>  3.07669 </y-m>
+      <z-m> -0.83672 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Suu12-R1</name>
+    <path>suu12.xml</path>
+    <offsets>
+      <x-m> -0.88160 </x-m>
+      <y-m>  3.74557 </y-m>
+      <z-m> -0.78572 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>Suu12-L1</object-name>
+    <object-name>Suu12-R1</object-name>
+    <condition>
+      <!-- <property>sim/model/show-suu1</property> -->
+      <property>/ai/models/multiplayer/sim/multiplay/generic/bool[19]</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Suu12-L2</object-name>
+    <object-name>Suu12-R2</object-name>
+    <condition>
+      <!-- <property>sim/model/show-suu2</property> -->
+      <property>/ai/models/multiplayer/sim/multiplay/generic/bool[20]</property>
+    </condition>
+  </animation>
+
+  <!-- CBU 24A bombs -->
+  <model>
+    <name>Cbu24A-L1</name>
+    <path>cbu24a.xml</path>
+    <offsets>
+      <x-m> -0.88160 </x-m>
+      <y-m> -3.74557 </y-m>
+      <z-m> -0.78572 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Cbu24A-L2</name>
+    <path>cbu24a.xml</path>
+    <offsets>
+      <x-m> -0.95305 </x-m>
+      <y-m> -3.07669 </y-m>
+      <z-m> -0.83672 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Cbu24A-R2</name>
+    <path>cbu24a.xml</path>
+    <offsets>
+      <x-m> -0.95305 </x-m>
+      <y-m>  3.07669 </y-m>
+      <z-m> -0.83672 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Cbu24A-R1</name>
+    <path>cbu24a.xml</path>
+    <offsets>
+      <x-m> -0.88160 </x-m>
+      <y-m>  3.74557 </y-m>
+      <z-m> -0.78572 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>Cbu24A-L1</object-name>
+    <object-name>Cbu24A-R1</object-name>
+    <condition>
+      <!-- <property>sim/model/show-cbu241</property> -->
+      <property>/ai/models/multiplayer/sim/multiplay/generic/bool[21]</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Cbu24A-L2</object-name>
+    <object-name>Cbu24A-R2</object-name>
+    <condition>
+      <!-- <property>sim/model/show-cbu242</property> -->
+      <property>/ai/models/multiplayer/sim/multiplay/generic/bool[22]</property>
+    </condition>
+  </animation>
+
+  <!-- SideWinders -->
+  <model>
+    <name>SideWinder-L1</name>
+    <path>sidewinder.xml</path>
+    <offsets>
+      <x-m> -0.918 </x-m>
+      <y-m> -5.028 </y-m>
+      <z-m> -0.611 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>SideWinder-L2</name>
+    <path>sidewinder.xml</path>
+    <offsets>
+      <x-m> -0.918 </x-m>
+      <y-m> -4.387 </y-m>
+      <z-m> -0.655 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>SideWinder-R2</name>
+    <path>sidewinder.xml</path>
+    <offsets>
+      <x-m> -0.918 </x-m>
+      <y-m>  4.387 </y-m>
+      <z-m> -0.655 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>SideWinder-R1</name>
+    <path>sidewinder.xml</path>
+    <offsets>
+      <x-m> -0.918 </x-m>
+      <y-m>  5.028 </y-m>
+      <z-m> -0.611 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>SideWinder-L1</object-name>
+    <object-name>SideWinder-R1</object-name>
+    <condition>
+      <!-- <property>sim/model/show-sidew1</property> -->
+      <property>/ai/models/multiplayer/sim/multiplay/generic/bool[23]</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>SideWinder-L2</object-name>
+    <object-name>SideWinder-R2</object-name>
+    <condition>
+      <!-- <property>sim/model/show-sidew2</property> -->
+      <property>/ai/models/multiplayer/sim/multiplay/generic/bool[24]</property>
+    </condition>
+  </animation>
+
+</PropertyList>

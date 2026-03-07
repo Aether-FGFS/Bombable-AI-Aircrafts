@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>mooring_mast.ac</path>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>16000</max-m>
+ </animation>
+
+ <animation>
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+
+ <animation>
+  <type>alpha-test</type>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>Hull</object-name>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>GreenFlash.1</object-name>
+  <object-name>GreenFlash.2</object-name>
+  <object-name>WhiteFlash.1</object-name>
+  <object-name>WhiteFlash.2</object-name>
+  <object-name>GreenHalo.2</object-name>
+  <object-name>WhiteHalo.2</object-name>
+  <condition>
+   <property>/constants/zero</property>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Head</object-name>
+  <min-m>0</min-m>
+  <max-m>1500</max-m>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Mast</object-name>
+  <condition>
+   <less-than-equals>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </less-than-equals>
+  </condition>
+  <min-m>0</min-m>
+  <max-m>2500</max-m>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <object-name>Mast</object-name>
+  <condition>
+   <greater-than>
+    <property>/sim/time/sun-angle-rad</property>
+    <value>1.57</value>
+   </greater-than>
+  </condition>
+  <min-m>0</min-m>
+  <max-m>500</max-m>
+ </animation>
+
+</PropertyList>

@@ -1,0 +1,352 @@
+<!-- $Id: LZ-129.xml,v 1.25 2011-01-09 20:55:15 anders Exp $ -->
+<!--
+  LZ-129 Hindenburg.
+
+  Copyright (C) 2006 - 2010  Anders Gidenstam  (anders(at)gidenstam.org)
+  This file is licensed under the GPL license v2 or later.
+-->
+<PropertyList>
+
+ <!-- The hull. -->
+ <path>LZ-129_hull.ac</path>
+ <offsets>
+  <!-- x/y/z == back/right/up -->
+  <x-m> 0.0 </x-m>
+  <y-m> 0.0 </y-m>
+  <z-m> 0.0 </z-m>
+ </offsets>
+
+ <!-- The control car -->
+ <model>
+  <name>Control car</name>
+  <path>Aircraft/LZ-129/Models/LZ-129_car_no_moving_parts.ac</path>
+  <offsets>
+   <x-m> 0.0 </x-m>
+   <y-m> 0.0 </y-m>
+   <z-m> 0.0 </z-m>
+  </offsets>
+ </model>
+
+ <!-- The steering assembly -->
+ <model>
+  <name>Steering assembly</name>
+  <path>Aircraft/LZ-129/Models/steering_assembly.xml</path>
+  <offsets>
+   <x-m>  38.70 </x-m>
+   <y-m>  -0.40 </y-m>
+   <z-m> -19.55 </z-m>
+  </offsets>
+ </model>
+
+ <!-- The elevator assembly -->
+ <model>
+  <name>Elevator assembly</name>
+  <path>Aircraft/LZ-129/Models/elevator_assembly.xml</path>
+  <offsets>
+   <x-m>  40.20 </x-m>
+   <y-m>  -0.90 </y-m>
+   <z-m> -19.55 </z-m>
+  </offsets>
+ </model>
+
+ <!-- Radio -->
+ <model>
+  <name>Radio</name>
+  <path>Aircraft/LZ-129/Models/radio.xml</path>
+  <offsets>
+   <heading-deg>270</heading-deg>
+   <x-m>  41.15 </x-m>
+   <y-m>  -0.40 </y-m>
+   <z-m> -19.68 </z-m>
+  </offsets>
+ </model>
+
+ <!-- Star observer's instruments -->
+ <!-- model>
+  <name>Bubble_sextant</name>
+  <path>Aircraft/Instruments-3d/BubbleSextant/RAF_Mk9_bubble_sextant.xml</path>
+  <offsets>
+   <x-m> 100.00 </x-m>
+   <y-m>   0.00 </y-m>
+   <z-m>  21.00 </z-m>
+  </offsets>
+ </model>
+ <animation>
+  <type>select</type>
+  <object-name>Bubble_sextant</object-name>
+  <condition>
+   <equals>
+    <property>sim/current-view/name</property>
+    <value>Star Observation View</value>
+   </equals>
+  </condition>
+ </animation -->
+
+ <!-- Control car crew -->
+ <model>
+  <name>Captain</name>
+  <path>Aircraft/LZ-129/Models/captain.xml</path>
+  <offsets>
+   <heading-deg>-10</heading-deg>
+   <x-m>  39.60 </x-m>
+   <y-m>   0.40 </y-m>
+   <z-m> -19.55 </z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>Rudder Coxswain</name>
+  <path>Aircraft/LZ-129/Models/rudder_coxswain.xml</path>
+  <offsets>
+   <x-m>  39.10 </x-m>
+   <y-m>  -0.40 </y-m>
+   <z-m> -19.55 </z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>Elevator Coxswain</name>
+  <path>Aircraft/LZ-129/Models/elevator_coxswain.xml</path>
+  <offsets>
+   <heading-deg>90</heading-deg>
+   <x-m>  40.20 </x-m>
+   <y-m>  -0.55 </y-m>
+   <z-m> -19.55 </z-m>
+  </offsets>
+ </model>
+
+
+ <!-- The engine cars -->
+ <model>
+  <name>Engine cars</name>
+  <path>Aircraft/LZ-129/Models/LZ-129_engine_cars.xml</path>
+  <offsets>
+   <x-m> 0.0 </x-m>
+   <y-m> 0.0 </y-m>
+   <z-m> 0.0 </z-m>
+  </offsets>
+ </model>
+
+ <!-- The elevators -->
+ <model>
+  <name>Elevators</name>
+  <path>Aircraft/LZ-129/Models/LZ-129_elevators.ac</path>
+  <offsets>
+   <x-m> 227.270 </x-m>
+   <y-m> 0.0 </y-m>
+   <z-m> 0.0 </z-m>
+  </offsets>
+ </model>
+
+ <!-- The rudders -->
+ <model>
+  <name>Rudders</name>
+  <path>Aircraft/LZ-129/Models/LZ-129_rudders.ac</path>
+  <offsets>
+   <x-m> 227.270 </x-m>
+   <y-m> 0.0 </y-m>
+   <z-m> 0.0 </z-m>
+  </offsets>
+ </model>
+
+ <!-- The main landing gear -->
+ <model>
+  <name>Main Gear</name>
+  <path>Aircraft/LZ-129/Models/LZ-129_main_gear.ac</path>
+  <offsets>
+   <x-m>  43.20 </x-m>
+   <y-m>   0.00 </y-m>
+   <z-m> -21.40 </z-m>
+  </offsets>
+ </model>
+
+ <!-- The tail landing gear -->
+<!--
+ <model>
+  <name>Tail Gear</name>
+  <path>Aircraft/LZ-129/Models/LZ-129_main_gear.ac</path>
+  <offsets>
+   <x-m> 209.50 </x-m>
+   <y-m>   0.00 </y-m>
+   <z-m> -23.50 </z-m>
+  </offsets>
+ </model>
+-->
+
+
+ <!--
+  ==== Animations =============================================================
+ -->
+ 
+ <!-- Hide crew. -->
+ <animation>
+  <type>select</type>
+  <object-name>Rudder Coxswain</object-name>
+  <condition>
+   <not>
+    <equals>
+     <property>sim/current-view/view-number</property>
+     <value>13</value>
+    </equals>
+   </not>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>Elevator Coxswain</object-name>
+  <condition>
+   <not>
+    <equals>
+     <property>sim/current-view/view-number</property>
+     <value>14</value>
+    </equals>
+   </not>
+  </condition>
+ </animation>
+ <animation>
+  <type>select</type>
+  <object-name>Captain</object-name>
+  <condition>
+   <not>
+    <equals>
+     <property>sim/current-view/view-number</property>
+     <value>0</value>
+    </equals>
+   </not>
+  </condition>
+ </animation>
+
+ <!-- Control surfaces -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Elevators</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <interpolation>
+   <entry>
+    <ind>-1.0</ind>
+    <dep>-30</dep>
+   </entry>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>30</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>227.270</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Rudders</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <interpolation>
+   <entry>
+    <ind>-1.0</ind>
+    <dep>-30</dep>
+   </entry>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>30</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>227.270</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Main Gear</object-name>
+  <property>fdm/jsbsim/gear/unit[0]/steering-angle-deg</property>
+  <center>
+   <x-m> 42.70 </x-m>
+   <y-m>  0.00 </y-m>
+   <z-m>  0.00 </z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+<!--
+ <animation>
+  <type>rotate</type>
+  <object-name>Tail Gear</object-name>
+  <property>fdm/jsbsim/gear/unit[1]/slip-angle-deg</property>
+  <center>
+   <x-m> 210.00 </x-m>
+   <y-m>   0.00 </y-m>
+   <z-m>   0.00 </z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+-->
+
+ <!-- LODs -->
+
+<!--
+ <animation>
+  <name>CockpitDetailHigh</name>
+ </animation>
+-->
+ <animation>
+  <name>CockpitDetailLow</name>
+  <object-name>Rudder Coxswain</object-name>
+  <object-name>Steering assembly</object-name>
+  <object-name>Elevator Coxswain</object-name>
+  <object-name>Elevator assembly</object-name>
+  <object-name>Captain</object-name>
+ </animation>
+
+ <!-- LOD Cockpit -->
+<!--
+ <animation>
+  <type>range</type>
+  <object-name>CockpitDetailHigh</object-name>
+  <min-m>0</min-m>
+  <max-m>50</max-m>
+ </animation>
+-->
+ <animation>
+  <type>range</type>
+  <object-name>CockpitDetailLow</object-name>
+  <min-m>0</min-m>
+  <max-m>2000</max-m>
+ </animation>
+
+ <!-- LOD for the model as a whole -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>20000</max-m>
+ </animation>
+
+</PropertyList>
