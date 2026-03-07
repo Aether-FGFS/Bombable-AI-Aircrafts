@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!--
+  Submarine Scout class airship.
+
+  Copyright (C) 2008 - 2011  Anders Gidenstam  (anders(at)gidenstam.org)
+  This file is licensed under the GPL license version 2 or later.
+-->
+<PropertyList>
+
+ <offsets>
+  <!-- x/y/z == back/right/up -->
+  <x-m> 0.0 </x-m>
+  <y-m> 0.0 </y-m>
+  <z-m> 0.0 </z-m>
+ </offsets>
+
+ <model>
+  <name>Crew1</name>
+  <path>Aircraft/SL20/Models/GroundCrew/crew.xml</path>
+  <offsets>
+   <x-m> -1.0 </x-m>
+   <y-m> -1.0 </y-m>
+   <z-m>  0.0 </z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Crew2</name>
+  <path>Aircraft/SL20/Models/GroundCrew/crew.xml</path>
+  <offsets>
+   <x-m> -1.0 </x-m>
+   <y-m>  1.0 </y-m>
+   <z-m>  0.0 </z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Crew3</name>
+  <path>Aircraft/SL20/Models/GroundCrew/crew.xml</path>
+  <offsets>
+   <x-m>  1.0 </x-m>
+   <y-m> -1.0 </y-m>
+   <z-m>  0.0 </z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Crew4</name>
+  <path>Aircraft/SL20/Models/GroundCrew/crew.xml</path>
+  <offsets>
+   <x-m> 1.0 </x-m>
+   <y-m> 1.0 </y-m>
+   <z-m> 0.0 </z-m>
+  </offsets>
+ </model>
+
+ <animation>
+  <enable-hot type="bool">false</enable-hot>
+ </animation>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5000</max-m>
+ </animation>
+
+</PropertyList>
