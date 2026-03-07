@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/f4f.xml">
+
+  <model>
+    <path>AI/Aircraft/F4F-Wildcat/Models/f4f.xml</path>
+  </model>
+
+</PropertyList>
