@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left -->
+  <model>
+    <path>mainrotor.xml</path>
+    <offsets>
+      <x-m>        0.168 </x-m>
+      <y-m>        0.000 </y-m>
+      <z-m>        0.973 </z-m>
+      <pitch-deg> -5 </pitch-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

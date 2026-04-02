@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left -->
+  <model>
+    <path>tube-rocket.xml</path>
+    <offsets>
+      <x-m> -0.159 </x-m>
+      <y-m> -2.012 </y-m>
+      <z-m> -0.380 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>tube-rocket.xml</path>
+    <offsets>
+      <x-m> -0.159 </x-m>
+      <y-m>  2.012 </y-m>
+      <z-m> -0.380 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>all-9k-121.xml</path>
+  </model>
+
+</PropertyList>

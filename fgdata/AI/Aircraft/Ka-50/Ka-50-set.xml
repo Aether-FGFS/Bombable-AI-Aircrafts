@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/ka50.xml">
+
+  <model>
+    <path>AI/Aircraft/Ka-50/Models/ka50.xml</path>
+  </model>
+
+</PropertyList>
