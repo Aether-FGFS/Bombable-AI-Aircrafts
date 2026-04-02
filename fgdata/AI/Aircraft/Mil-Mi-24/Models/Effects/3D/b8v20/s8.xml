@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>s8.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>rocket</object-name>
+
+    <!-- Transparence -->
+  </animation>
+
+</PropertyList>

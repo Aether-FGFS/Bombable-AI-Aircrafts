@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/mi24.xml">
+
+  <model>
+    <path>AI/Aircraft/Mil-Mi-24/Models/mi24.xml</path>
+  </model>
+
+</PropertyList>
