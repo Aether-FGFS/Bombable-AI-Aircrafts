@@ -6,7 +6,7 @@ This package contain Aircrafts, with Dogfight Combat AI scenarios.
 Installation: 
 
 To install this addon, copy and paste files from download into fgdata folder, following file structure. 
- Run AI Scenarios to use AI airplanes and Heli in Dogfight. 
+ Run AI Scenarios to use AI Airplanes and Helicopters in Dogfight. 
  
 
 Always remember, that war is Disaster for regular people and soldiers. 
