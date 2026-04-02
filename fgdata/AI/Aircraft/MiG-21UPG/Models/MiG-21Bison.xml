@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!-- MiG-21Bison model config file -->
+<!-- Aether 2026 -->
+
+<PropertyList include="MiG-21Bison-bombableinclude.xml">
+
+        <description>MiG-21Bison</description>
+
+
+	<path>AI/Aircraft/MiG-21UPG/Models/MiG-21Bison.ac</path>
+        <texture-path>AI/Aircraft/MiG-21UPG/Models</texture-path>
+
+    <animation>
+        <type>select</type>
+        <object-name>landing-gear</object-name>
+        <condition>
+            <greater-than>
+                <property>gear/gear[1]/position-norm</property>
+                <value>0.2</value>
+            </greater-than>
+        </condition>
+    </animation>
+        
+    <animation>
+        <type>select</type>
+        <object-name>landing-gear</object-name>
+        <condition>
+            <greater-than>
+                <property>gear/gear[2]/position-norm</property>
+                <value>0.2</value>
+            </greater-than>
+        </condition>
+    </animation>
+	
+
+</PropertyList>

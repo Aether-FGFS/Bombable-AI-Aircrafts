@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<PropertyList include="Models/MiG-21Bison.xml">
+		<model>
+			<path>AI/Aircraft/MiG-21UPG/Models/MiG-21Bison.xml</path>
+                </model>
+</PropertyList>
