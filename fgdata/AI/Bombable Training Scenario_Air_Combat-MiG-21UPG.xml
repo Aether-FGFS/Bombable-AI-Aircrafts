@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <scenario>
+
+    <description>MiG-21UPG Training scenario.  Starts at KSFO! </description>
+
+    <entry>
+      <type>aircraft</type>
+      <callsign>Old Eagle</callsign>
+      <name>MiG-21UPG Leader</name>
+      <model     type="string">Aircraft/MiG-21UPG/Models/MiG-21Bison.xml</model>
+      <latitude  type="double">37.608720</latitude>
+      <longitude type="double">-122.3076</longitude>
+      <altitude  type="double">3500</altitude>
+      <speed>400.0</speed>
+      <heading   type="double">192</heading>
+    </entry>
+
+    <entry>
+      <type>aircraft</type>
+      <callsign>Swiftblade</callsign>
+      <name>MiG-21UPG Wingman</name>
+      <model     type="string">Aircraft/MiG-21UPG/Models/MiG-21Bison.xml</model>
+      <latitude  type="double">37.608200</latitude>
+      <longitude type="double">-122.2988</longitude>
+      <altitude  type="double">3500</altitude>
+      <speed>400.0</speed>
+      <heading   type="double">192</heading>
+    </entry>
+
+  </scenario>
+
+</PropertyList>
