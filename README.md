@@ -1,4 +1,4 @@
-Bombable-AI-Aircrafts is Addon, for Flightgear Flight Simulator with installed Bombable-5.0 addon.
+Bombable-AI-Aircrafts is Addon, for Flightgear Flight Simulator with installed Bombable-6.0 addon.
 __________________________________________________________________________________________________
 
 This package contain Aircrafts, with Dogfight Combat AI scenarios. 
