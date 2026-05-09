@@ -22,6 +22,8 @@
           objectNodeName : thisNodeName,
           objectNode     : props.globals.getNode(thisNodeName),
           updateTime_s   : 1/3,
+          faction        : "B", 
+
           altitudes : {
             wheelsOnGroundAGL_m : 1,
             minimumAGL_m        : 100,
