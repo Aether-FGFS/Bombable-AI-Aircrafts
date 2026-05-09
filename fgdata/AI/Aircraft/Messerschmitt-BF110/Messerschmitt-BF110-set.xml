@@ -6,4 +6,8 @@
     <path>AI/Aircraft/Messerschmitt-BF110/Models/bf110.xml</path>
   </model>
 
+  <bombable>
+    <player-faction type="string">B</player-faction>
+  </bombable>
+
 </PropertyList>
