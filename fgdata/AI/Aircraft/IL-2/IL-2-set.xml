@@ -2,8 +2,14 @@
 
 <PropertyList include="Models/il2.xml">
 
+
   <model>
     <path>AI/Aircraft/IL-2/Models/il2.xml</path>
   </model>
+
+  <bombable>
+    <player-faction type="string">A</player-faction>
+  </bombable>
+
 
 </PropertyList>
