@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <name>Beacon1On</name>
+    <path>beacon.xml</path>
+    <offsets>
+      <x-m> 5.16347 </x-m>
+      <y-m> 2.27101 </y-m>
+      <z-m> 1.59591 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>BeaconOn</name>
+    <object-name>Beacon1On</object-name>
+  </animation>
+
+  <model>
+    <name>Beacon1Off</name>
+    <path>empty.xml</path>
+    <offsets>
+      <x-m> 5.16347 </x-m>
+      <y-m> 2.27101 </y-m>
+      <z-m> 1.59591 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>BeaconOff</name>
+    <object-name>Beacon1Off</object-name>
+  </animation>
+
+  <animation>
+    <name>BeaconStrobe</name>
+    <type>timed</type>
+    <object-name>BeaconOn</object-name>
+    <object-name>BeaconOff</object-name>
+    <use-personality type="bool">true</use-personality>
+    <branch-duration-sec>0.1</branch-duration-sec>
+    <branch-duration-sec>1.0</branch-duration-sec>
+  </animation>
+
+  <model>
+    <name>Strobe1-Light</name>
+    <path>StrobeLight.xml</path>
+    <offsets>
+      <x-m> -2.09588 </x-m>
+      <y-m> -8.16947 </y-m>
+      <z-m>  0.49446 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Strobe2-Light</name>
+    <path>StrobeLight.xml</path>
+    <offsets>
+      <x-m> -2.09588 </x-m>
+      <y-m>  8.16947 </y-m>
+      <z-m>  0.49446 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>AllStrobeLight</name>
+    <object-name>Strobe1-Light</object-name>
+    <object-name>Strobe2-Light</object-name>
+  </animation>
+
+  <model>
+    <name>StrobeOff1</name>
+    <path>empty.xml</path>
+    <offsets>
+      <x-m> -2.09588 </x-m>
+      <y-m> -8.16947 </y-m>
+      <z-m>  0.49446 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>StrobeOff2</name>
+    <path>empty.xml</path>
+    <offsets>
+      <x-m> -2.09588 </x-m>
+      <y-m>  8.16947 </y-m>
+      <z-m>  0.49446 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>AllStrobeOff</name>
+    <object-name>StrobeOff1</object-name>
+    <object-name>StrobeOff2</object-name>
+  </animation>
+
+  <animation>
+    <name>timed_strobe</name>
+    <type>timed</type>
+    <object-name>AllStrobeLight</object-name>
+    <object-name>AllStrobeOff</object-name>
+    <use-personality type="bool">true</use-personality>
+    <branch-duration-sec>0.1</branch-duration-sec>
+    <branch-duration-sec>1.0</branch-duration-sec>
+  </animation>
+
+  <model>
+    <path>RedLight.xml</path>
+    <offsets>
+      <x-m> -2.07588 </x-m>
+      <y-m> -8.16947 </y-m>
+      <z-m>  0.49446 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>GreenLight.xml</path>
+    <offsets>
+      <x-m> -2.07588 </x-m>
+      <y-m>  8.16947 </y-m>
+      <z-m>  0.49446 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
