@@ -7,9 +7,8 @@
     <path>AI/Aircraft/IL-2/Models/il2.xml</path>
   </model>
 
-  <bombable>
-    <player-faction type="string">A</player-faction>
-  </bombable>
-
+  <nasal>
+    <path>AI/Aircraft/IL-2/Nasal/il2-faction.nas</path>
+  </nasal>
 
 </PropertyList>

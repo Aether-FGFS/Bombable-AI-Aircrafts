@@ -27,11 +27,11 @@
             wheelsOnGroundAGL_m : 1,
             minimumAGL_m        : 100,
             maximumAGL_m        : 13715,
-            crashedAGL_m        : 0.6,
+            crashedAGL_m        : -0.6,
           },
           velocities : {
             maxSpeedReduce_percent                       : 0.5,
-            minSpeed_kt                                  : 80,
+            minSpeed_kt                                  : 170,
             cruiseSpeed_kt                               : 194,
             attackSpeed_kt                               : 210,
             maxSpeed_kt                                  : 220,
