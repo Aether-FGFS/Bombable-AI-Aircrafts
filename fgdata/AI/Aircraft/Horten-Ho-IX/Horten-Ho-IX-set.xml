@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/ho-ix.xml">
+
+  <model>
+    <path>AI/Aircraft/Horten-Ho-IX/Models/ho-ix.xml</path>
+  </model>
+
+  <nasal>
+    <path>AI/Aircraft/Horten-Ho-IX/Nasal/hoix-faction.nas</path>
+  </nasal>
+
+</PropertyList>

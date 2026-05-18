@@ -6,4 +6,9 @@
     <path>AI/Aircraft/La-5/Models/la5.xml</path>
   </model>
 
+  <nasal>
+    <path>AI/Aircraft/La-5/Nasal/la5-faction.nas</path>
+  </nasal>
+
+
 </PropertyList>

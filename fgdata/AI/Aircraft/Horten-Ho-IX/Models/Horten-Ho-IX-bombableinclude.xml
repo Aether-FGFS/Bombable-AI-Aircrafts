@@ -8,7 +8,7 @@
 
       var nodeName = cmdarg().getPath();
 
-      print("Loading La 5 ", nodeName);
+      print("Loading Horten-Ho-IX ", nodeName);
 
       if ( bombable.check_overall_initialized (nodeName) ) {
         return;
@@ -22,8 +22,6 @@
           objectNodeName : thisNodeName,
           objectNode     : props.globals.getNode(thisNodeName),
           updateTime_s   : 1/3,
-          faction        : "A",
-
           altitudes : {
             wheelsOnGroundAGL_m : 1,
             minimumAGL_m        : 100,
@@ -33,9 +31,9 @@
           velocities : {
             maxSpeedReduce_percent                       : 0.5,
             minSpeed_kt                                  : 190,
-            cruiseSpeed_kt                               : 300,
-            attackSpeed_kt                               : 320,
-            maxSpeed_kt                                  : 350,
+            cruiseSpeed_kt                               : 490,
+            attackSpeed_kt                               : 500,
+            maxSpeed_kt                                  : 528,
             damagedAltitudeChangeMaxRate_meterspersecond : 30,
 
             diveTerminalVelocities: {
@@ -83,7 +81,7 @@
               maxDamage_percent   : 25,
               maxDamageDistance_m : 1500,
               weaponAngle_deg     : { heading: 0, elevation: 0 },
-              weaponOffset_m      : { x:-3.580, y:-0.260, z:0.586 },
+              weaponOffset_m      : { x:-3.364, y:-1.095, z:0.500 },
               weaponSize_m        : { start:0.1, end:0.1 },
             },
             cannon_right : {
@@ -91,14 +89,14 @@
               maxDamage_percent   : 25,
               maxDamageDistance_m : 1500,
               weaponAngle_deg     : { heading: 0, elevation: 0 },
-              weaponOffset_m      : { x:-3.580, y:0.260, z:0.586 },
+              weaponOffset_m      : { x:-3.364, y:1.095, z:0.500 },
               weaponSize_m        : { start:0.1, end:0.1 },
             },
           },
           dimensions : {
-            width_m             : 9.80,
-            length_m            : 8.67,
-            height_m            : 2.54,
+            width_m             : 16.76,
+            length_m            : 7.47,
+            height_m            : 2.81,
             damageRadius_m      : 2,
             vitalDamageRadius_m : 1,
           },
@@ -121,14 +119,14 @@
         bombable.bombable_init ( thisNodeName );
         bombable.attack_init ( thisNodeName );
         bombable.weapons_init ( thisNodeName );
-        bombable.startSmoke("pistonexhaust", thisNodeName );
+        bombable.startSmoke("jetcontrail", thisNodeName );
       }
       object_init();
       ]]>
     </load>
     <unload>
       <![CDATA[
-        print("Unload La 5.");
+        print("Unload Horten-Ho-IX.");
         var nodeName= cmdarg().getPath();
         bombable.de_overall_initialize( nodeName );
         bombable.initialize_del( nodeName );

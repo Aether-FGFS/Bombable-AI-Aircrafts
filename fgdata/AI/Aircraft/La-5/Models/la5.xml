@@ -4,6 +4,10 @@
 
   <path>la5.ac</path>
 
+  <sound>
+     <path>AI/Aircraft/La-5/Sounds/ai-sound.xml</path>
+  </sound>
+
   <animation>
     <!-- Objets opaques -->
     <object-name>la5</object-name>
@@ -30,24 +34,10 @@
     <object-name>rouesrentrees</object-name>
     <object-name>propdisc</object-name>
     <object-name>propblur</object-name>
-
-    <property-base>sim/model/livery</property-base>
-    <texture-prop>texture</texture-prop>
-    <texture>texture.png</texture>
-    <specular>
-      <red-prop>specular/red</red-prop>
-      <green-prop>specular/green</green-prop>
-      <blue-prop>specular/blue</blue-prop>
-    </specular>
+    <property-base>/ai/models/multiplayer/sim/multiplay/generic</property-base>
+    <texture-prop>string[1]</texture-prop>
+    <texture>/ai/models/multiplayer/sim/multiplay/generic/string[1]</texture>
   </animation>
-
-  <effect>
-    <inherits-from>AI/Aircraft/La-5/Models/Effects/Bump/bumpspec</inherits-from>
-    <object-name>la5</object-name>
-    <object-name>portesfermees</object-name>
-    <object-name>portesouvertes</object-name>
-    <object-name>bol</object-name>
-  </effect>
 
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
