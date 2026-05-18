@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left -->
+  <model>
+    <path>light-cone.xml</path>
+    <offsets>
+      <x-m>       -1.539 </x-m>
+      <y-m>       -1.211 </y-m>
+      <z-m>        0.476 </z-m>
+      <pitch-deg> -7.500 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>RedLight.xml</path>
+    <offsets>
+      <x-m> 2.652 </x-m>
+      <y-m> 0.930 </y-m>
+      <z-m> 0.150 </z-m>
+    </offsets>
+  </model>
+
+  <!--Turret light -->
+  <model>
+    <name>turret-light</name>
+    <path>light-cone.xml</path>
+    <offsets>
+      <x-m>       -0.666 </x-m>
+      <y-m>        0.608 </y-m>
+      <z-m>        1.099 </z-m>
+      <pitch-deg> -3.500 </pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>turret-light</object-name>
+    <property>sim/multiplay/generic/float[8]</property>
+    <factor>1</factor>
+    <center>
+      <x-m> -0.501 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.799 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
