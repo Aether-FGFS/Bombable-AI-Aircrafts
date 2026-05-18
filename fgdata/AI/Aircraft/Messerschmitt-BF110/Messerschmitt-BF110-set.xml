@@ -2,12 +2,23 @@
 
 <PropertyList include="Models/bf110.xml">
 
-  <model>
-    <path>AI/Aircraft/Messerschmitt-BF110/Models/bf110.xml</path>
-  </model>
+    <model>
+       <path>AI/Aircraft/Messerschmitt-BF110/Models/bf110.xml</path>
+    </model>
 
-  <bombable>
-    <player-faction type="string">B</player-faction>
-  </bombable>
+    <sim>
+        <model>
+            <fallback-model-index>468</fallback-model-index>
+        </model>
+    </sim>
+
+  <nasal>
+    <ai_mp_receiver>
+        <file>Nasal/ai_mp_receiver.nas</file>
+    </ai_mp_receiver>
+    <office_faction>
+        <path>Nasal/bf110-faction.nas</path>
+    </office_faction>
+  </nasal>
 
 </PropertyList>

@@ -4,6 +4,10 @@
 
   <path>bf110.ac</path>
 
+  <sound>
+     <path>AI/Aircraft/Messerschmitt-BF110/Sounds/ai-sound.xml</path>
+  </sound>
+
   <animation>
     <!-- Objets opaques -->
     <object-name>bf110</object-name>
