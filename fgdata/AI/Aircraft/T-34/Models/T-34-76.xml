@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="T-34-76-bombableinclude.xml">
+
+  <path>T34-76R.ac</path>
+
+  <sound>
+     <path>AI/Aircraft/T-34/Sounds/ai-sound.xml</path>
+  </sound>
+
+
+
+  <model>
+    <path>AI/Aircraft/T-34/Models/Effects/Engine/engine-iddle.xml</path>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/T-34/Models/Effects/Engine/engine-load.xml</path>
+  </model>
+
+  <inertia x="1.0" y="3.0" z="3.5"/>
+
+  <animation>
+    <object-name>body</object-name>
+    <object-name>fender-l</object-name>
+    <object-name>fender-r</object-name>
+    <object-name>gun1</object-name>
+    <object-name>gun2</object-name>
+    <object-name>gun3</object-name>
+    <object-name>hatch2</object-name>
+    <object-name>periscope2-l</object-name>
+    <object-name>periscope2-r</object-name>
+    <object-name>light</object-name>
+    <object-name>lightint</object-name>
+    <object-name>box</object-name>
+    <object-name>exhaust-l</object-name>
+    <object-name>exhaust-r</object-name>
+    <object-name>chassis2-l</object-name>
+    <object-name>chassis2-r</object-name>
+    <object-name>caterpillar-l</object-name>
+    <object-name>caterpillar-r</object-name>
+    <object-name>sprocket-l</object-name>
+    <object-name>sprocket-r</object-name>
+    <object-name>idler-l</object-name>
+    <object-name>idler-r</object-name>
+    <object-name>wheel1-l</object-name>
+    <object-name>wheel1-r</object-name>
+    <object-name>wheel2-l</object-name>
+    <object-name>wheel2-r</object-name>
+    <object-name>wheel3-l</object-name>
+    <object-name>wheel3-r</object-name>
+    <object-name>wheel4-l</object-name>
+    <object-name>wheel4-r</object-name>
+    <object-name>wheel5-l</object-name>
+    <object-name>wheel5-r</object-name>
+    <object-name>ring</object-name>
+    <object-name>turret</object-name>
+    <object-name>turretint</object-name>
+    <object-name>barrel1</object-name>
+    <object-name>barrel2</object-name>
+    <object-name>commanderdoor</object-name>
+    <object-name>periscope</object-name>
+    <object-name>visor-l</object-name>
+    <object-name>visor-r</object-name>
+    <object-name>fuel-l</object-name>
+    <object-name>fuel-r</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>body</object-name>
+    <object-name>fender-l</object-name>
+    <object-name>fender-r</object-name>
+    <object-name>gun1</object-name>
+    <object-name>gun2</object-name>
+    <object-name>gun3</object-name>
+    <object-name>hatch2</object-name>
+    <object-name>periscope2-l</object-name>
+    <object-name>periscope2-r</object-name>
+    <object-name>light</object-name>
+    <object-name>lightint</object-name>
+    <object-name>box</object-name>
+    <object-name>exhaust-l</object-name>
+    <object-name>exhaust-r</object-name>
+    <object-name>chassis2-l</object-name>
+    <object-name>chassis2-r</object-name>
+    <object-name>caterpillar-l</object-name>
+    <object-name>caterpillar-r</object-name>
+    <object-name>sprocket-l</object-name>
+    <object-name>sprocket-r</object-name>
+    <object-name>idler-l</object-name>
+    <object-name>idler-r</object-name>
+    <object-name>wheel1-l</object-name>
+    <object-name>wheel1-r</object-name>
+    <object-name>wheel2-l</object-name>
+    <object-name>wheel2-r</object-name>
+    <object-name>wheel3-l</object-name>
+    <object-name>wheel3-r</object-name>
+    <object-name>wheel4-l</object-name>
+    <object-name>wheel4-r</object-name>
+    <object-name>wheel5-l</object-name>
+    <object-name>wheel5-r</object-name>
+    <object-name>ring</object-name>
+    <object-name>turret</object-name>
+    <object-name>turretint</object-name>
+    <object-name>barrel1</object-name>
+    <object-name>barrel2</object-name>
+    <object-name>commanderdoor</object-name>
+    <object-name>periscope</object-name>
+    <object-name>visor-l</object-name>
+    <object-name>visor-r</object-name>
+    <object-name>fuel-l</object-name>
+    <object-name>fuel-r</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+  </animation>
+
+  <model>
+    <path>lights/all-lights.xml</path>
+  </model>
+
+  <!-- mode demo start -->
+  <model>
+    <name>flag2</name>
+    <path>flag.xml</path>
+    <offsets>
+      <x-m>  0.03 </x-m>
+      <y-m>  0.80 </y-m>
+      <z-m> -0.50 </z-m>
+      <pitch-deg> 10 </pitch-deg>
+      <roll-deg>  10 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>flag3</name>
+    <path>flag2.xml</path>
+    <offsets>
+      <x-m>  0.03 </x-m>
+      <y-m>  0.80 </y-m>
+      <z-m> -0.50 </z-m>
+      <pitch-deg> -10 </pitch-deg>
+      <roll-deg>  -10 </roll-deg>
+      <heading-deg> -180 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>fuel-l</object-name>
+    <object-name>fuel-r</object-name>
+    <condition>
+      <equals>
+        <property>/sim/model/equipments</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>flag2</object-name>
+    <object-name>flag3</object-name>
+    <condition>
+      <equals>
+        <property>/sim/model/equipments</property>
+        <value>2</value>
+      </equals>
+    </condition>
+  </animation>
+  <!-- mode demo end -->
+
+  <!-- Effects on soil -->
+  <model>
+    <path>AI/Aircraft/T-34/Models/Effects/Ground/ground1.xml</path>
+    <offsets>
+      <x-m>  4.624 </x-m>
+      <y-m> -2.000 </y-m>
+      <z-m> -1.447 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/T-34/Models/Effects/Ground/ground2.xml</path>
+    <offsets>
+      <x-m>  4.624 </x-m>
+      <y-m>  2.000 </y-m>
+      <z-m> -1.447 </z-m>
+    </offsets>
+  </model>
+
+  <!-- caterpillar -->
+  <animation>
+    <type>translate</type>
+    <object-name>sprocket-l</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>sprocket-l</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m>  2.620 </x-m>
+      <y-m> -1.000 </y-m>
+      <z-m> -0.381 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>idler-l</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>idler-l</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m> -2.514 </x-m>
+      <y-m> -1.000 </y-m>
+      <z-m> -0.310 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>wheel1-l</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>wheel1-l</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m> -1.740 </x-m>
+      <y-m> -1.000 </y-m>
+      <z-m> -0.507 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>wheel2-l</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>wheel2-l</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m> -0.829 </x-m>
+      <y-m> -1.000 </y-m>
+      <z-m> -0.507 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>wheel3-l</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>wheel3-l</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m>  0.174 </x-m>
+      <y-m> -1.000 </y-m>
+      <z-m> -0.507 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>wheel4-l</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>wheel4-l</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m>  1.045 </x-m>
+      <y-m> -1.000 </y-m>
+      <z-m> -0.507 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>wheel5-l</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>wheel5-l</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m>  1.902 </x-m>
+      <y-m> -1.000 </y-m>
+      <z-m> -0.507 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>sprocket-r</object-name>
+    <property>gear/gear[3]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>sprocket-r</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m>  2.620 </x-m>
+      <y-m>  1.000 </y-m>
+      <z-m> -0.381 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>idler-r</object-name>
+    <property>gear/gear[3]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>idler-r</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m> -2.514 </x-m>
+      <y-m>  1.000 </y-m>
+      <z-m> -0.310 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>wheel1-r</object-name>
+    <property>gear/gear[3]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>wheel1-r</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m> -1.740 </x-m>
+      <y-m>  1.000 </y-m>
+      <z-m> -0.507 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>wheel2-r</object-name>
+    <property>gear/gear[3]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>wheel2-r</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m> -0.829 </x-m>
+      <y-m>  1.000 </y-m>
+      <z-m> -0.507 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>wheel3-r</object-name>
+    <property>gear/gear[3]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>wheel3-r</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m>  0.174 </x-m>
+      <y-m>  1.000 </y-m>
+      <z-m> -0.507 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>wheel4-r</object-name>
+    <property>gear/gear[3]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>wheel4-r</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m>  1.045 </x-m>
+      <y-m>  1.000 </y-m>
+      <z-m> -0.507 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>wheel5-r</object-name>
+    <property>gear/gear[3]/compression-norm</property>
+    <interpolation>
+      <entry><ind>  0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> -1 </ind><dep> 0.2 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>wheel5-r</object-name>
+    <property>/sim/model/t34/wheel-speed-ms</property>
+    <factor>-15</factor>
+    <center>
+      <x-m>  1.902 </x-m>
+      <y-m>  1.000 </y-m>
+      <z-m> -0.507 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- caterpillar animation — teraz cez clutch property -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>caterpillar-l</object-name>
+    <property>/sim/model/t34/ground-speed-kt</property>
+    <factor> 0.05 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>caterpillar-r</object-name>
+    <property>/sim/model/t34/ground-speed-kt</property>
+    <factor> 0.05 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- cannon -->
+  <!-- TURRET ROTATION — driven by Nasal via sim/multiplay/generic/float[8] -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ring</object-name>
+    <object-name>turret</object-name>
+    <object-name>turretint</object-name>
+    <object-name>barrel1</object-name>
+    <object-name>barrel2</object-name>
+    <object-name>commanderdoor</object-name>
+    <object-name>periscope</object-name>
+    <object-name>visor-l</object-name>
+    <object-name>visor-r</object-name>
+    <object-name>flag2</object-name>
+    <object-name>flag3</object-name>
+    <property>sim/multiplay/generic/float[8]</property>
+    <center>
+      <x-m> -0.501 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.799 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- BARREL ELEVATION — driven by Nasal via sim/multiplay/generic/float[9] -->
+  <animation>
+    <type>rotate</type>
+    <object-name>barrel1</object-name>
+    <object-name>barrel2</object-name>
+    <property>sim/multiplay/generic/float[9]</property>
+    <center>
+      <x-m> -1.300 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.890 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
