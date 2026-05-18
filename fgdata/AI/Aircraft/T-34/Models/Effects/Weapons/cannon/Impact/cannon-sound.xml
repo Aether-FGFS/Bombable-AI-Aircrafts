@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <fx>
+
+    <bomb>
+      <name>Bomb</name>
+      <path>explode.wav</path>
+      <condition>
+        <or>
+          <not><property>sim/multiplay/generic/int[10]</property></not>
+          <property>sim/multiplay/generic/int[10]</property>
+        </or>
+      </condition>
+      <volume>
+        <factor>1.2</factor>
+        <max>1.0</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>3000</max-dist>
+    </bomb>
+
+  </fx>
+
+</PropertyList>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <path>Aircraft/T-34/Models/Effects/Weapons/guns/fire.xml</path>
+    <condition>
+      <property>sim/multiplay/generic/int[13]</property>
+    </condition>
+    <offsets>
+      <x-m>-2.40 </x-m>
+      <y-m> 0.55 </y-m>
+      <z-m> 0.23 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1 </x-offset>
+        <y-offset> 1 </y-offset>
+        <z-offset> 1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+
+</PropertyList>

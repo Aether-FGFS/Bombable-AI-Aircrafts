@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PropertyList>
+
+  <!-- Cannon blast -->
+  <model>
+    <name>cannon_blast</name>
+    <path>cannon_blast.xml</path>
+    <condition>
+      <property>sim/multiplay/generic/int[10]</property>
+    </condition>
+    <offsets>
+      <x-m> -4.508 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.900 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Turret rotation for explosion (Z axis) -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cannon_blast</object-name>
+    <property>sim/model/t34/sub-heading</property>
+    <factor>1</factor>
+    <center>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.9 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <!-- Barrel elevation for explosion (Y axis) -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cannon_blast</object-name>
+    <property>sim/multiplay/generic/float[9]</property>
+    <factor>1</factor>
+    <center>
+      <x-m> -1.3 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  0.89 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Smoke -->
+  <model>
+    <name>smoke</name>
+    <path>cannon_fire.xml</path>
+    <condition>
+      <property>sim/multiplay/generic/int[10]</property>
+    </condition>
+    <offsets>
+      <x-m> -4.508 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.900 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Turret rotation for smoke (Z axis) -->
+  <animation>
+    <type>rotate</type>
+    <object-name>smoke</object-name>
+    <property>sim/model/t34/sub-heading</property>
+    <factor>1</factor>
+    <center>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> 0.9 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <!-- Barrel elevation for smoke (Y axis) -->
+  <animation>
+    <type>rotate</type>
+    <object-name>smoke</object-name>
+    <property>sim/multiplay/generic/float[9]</property>
+    <factor>1</factor>
+    <center>
+      <x-m> -1.3 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  0.89 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+
+</PropertyList>

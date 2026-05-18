@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sound>
+    <path>Aircraft/T-34/Models/Effects/Weapons/guns/12mm/guns-sound.xml</path>
+  </sound>
+
+  <model>
+    <path>12mm-ExplosionFire.xml</path>
+  </model>
+
+  <model>
+    <path>12mm-ExplosionSmoke.xml</path>
+  </model>
+
+</PropertyList>
