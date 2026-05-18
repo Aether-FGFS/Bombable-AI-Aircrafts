@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>mesh2.ac</path>
+  <offsets>
+    <x-m> 0.0 </x-m>
+    <y-m> 0.0 </y-m>
+    <z-m> 0.0 </z-m>
+    <roll-deg>    0.000 </roll-deg>
+    <pitch-deg>   0.000 </pitch-deg>
+    <heading-deg> 0.000 </heading-deg>
+  </offsets>
+
+  <animation>
+    <!-- Objets transparents -->
+    <object-name>mesh-1</object-name>
+    <object-name>mesh-2</object-name>
+    <object-name>mesh-3</object-name>
+    <object-name>mesh-9</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>mesh-1</object-name>
+    <object-name>mesh-2</object-name>
+    <object-name>mesh-3</object-name>
+    <object-name>mesh-9</object-name>
+  </animation>
+
+</PropertyList>

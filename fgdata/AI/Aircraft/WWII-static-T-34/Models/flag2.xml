@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>nflag5p.ac</path>
+  <offsets>
+    <x-m> 0.0 </x-m>
+    <y-m> 0.0 </y-m>
+    <z-m> 0.0 </z-m>
+    <roll-deg>    0.000 </roll-deg>
+    <pitch-deg>   0.000 </pitch-deg>
+    <heading-deg> 0.000 </heading-deg>
+  </offsets>
+
+  <animation>
+    <!-- Objets transparents -->
+    <object-name>Plane</object-name>
+    <object-name>Plane2</object-name>
+    <object-name>Plane3</object-name>
+    <object-name>Plane4</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>Plane</object-name>
+    <object-name>Plane2</object-name>
+    <object-name>Plane3</object-name>
+    <object-name>Plane4</object-name>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>Plane</object-name>
+    <object-name>Plane2</object-name>
+    <object-name>Plane3</object-name>
+    <object-name>Plane4</object-name>
+    <!-- <property>/environment/wind-from-heading-deg</property>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+		<property>/controls/flight/rudder</property> -->
+      	        <property>/controls/flight/elevator</property>
+		<interpolation>
+			<entry><ind>-180</ind><dep>-180</dep></entry><!-- right -->
+			<entry><ind>180</ind><dep>180</dep></entry><!-- left -->
+		</interpolation>
+		<center>
+			<x-m>-0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Plane</object-name>
+    <object-name>Plane2</object-name>
+    <object-name>Plane3</object-name>
+    <object-name>Plane4</object-name>
+    <condition>
+      <equals>
+	  <property>controls/engines/engine[0]/mixture</property>
+	  <value type="double">0.0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+   <type>timed</type>
+    <object-name>Plane</object-name>
+    <object-name>Plane2</object-name>
+    <object-name>Plane3</object-name>
+    <object-name>Plane4</object-name>
+    <duration-sec>0.12</duration-sec>
+  </animation>
+
+
+</PropertyList>
