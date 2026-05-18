@@ -1,0 +1,444 @@
+<PropertyList include="panzer-bombableinclude.xml">
+ <path>panzer.ac</path>
+        
+<offsets>
+<heading-deg>90.0</heading-deg>
+<z-m>0.3</z-m>
+<x-m>2.45</x-m>
+</offsets>
+
+        <!-- rotate turret -->
+        <animation>
+                <object-name>turret01</object-name>
+                <object-name>barrel</object-name>
+                <type>spin</type>
+                <property>controls/flight/aileron</property>
+                <factor>-1</factor>
+                <center>
+                        <x-m>0</x-m>
+                        <y-m>0</y-m>
+                        <z-m>0.1</z-m>
+                </center>
+                <axis>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>1</z>
+                </axis>
+        </animation>
+ 
+        <!-- shift barrel-->
+        <animation>
+                <object-name>barrel</object-name>
+                <type>rotate</type>
+                <property>controls/flight/elevator</property>
+                <factor>-6.5</factor>
+                <offset-deg>-5</offset-deg>
+                <min>-3</min>
+                <max>35</max>
+                <center>
+                        <x-m>-0.117</x-m>
+                        <y-m>-0.499</y-m>
+                        <z-m>1.910</z-m>
+                </center>
+                <axis>
+                        <x>1</x>
+                        <y>0</y>
+                        <z>0</z>
+                </axis>
+        </animation>
+
+<!-- Start Extra Details -->
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/panzer_details.ac</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+<!-- End Extra Details -->
+<!-- Start Tracks -->
+  <model>
+    <path>AI/Aircraft/panzer/Models/tracks.xml</path>
+    <offsets>
+      <x-m>-1.7</x-m>
+      <y-m>0.5</y-m>
+      <z-m>0.9</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+    <overlay>
+      <params>
+        <track>gear/gear[0]/track-pos-norm</track>
+      </params>
+    </overlay>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/tracks.xml</path>
+    <offsets>
+      <x-m>1.7</x-m>
+      <y-m>0.5</y-m>
+      <z-m>0.9</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+    <overlay>
+      <params>
+        <track>gear/gear[1]/track-pos-norm</track>
+      </params>
+    </overlay>
+  </model>
+
+<!-- End Tracks -->
+
+<!-- Start Large Gears -->
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/large_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>-2.85</y-m>
+      <z-m>0.2</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/large_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>-2.85</y-m>
+      <z-m>0.2</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/large_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>3.3</y-m>
+      <z-m>0.47</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/large_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>3.3</y-m>
+      <z-m>0.47</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+<!-- End Large Gears -->
+<!-- Start Small Gears -->
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>0</y-m>
+      <z-m>0.56</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>0</y-m>
+      <z-m>0.56</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>1</y-m>
+      <z-m>0.6</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>1</y-m>
+      <z-m>0.6</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>2</y-m>
+      <z-m>0.6</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>2</y-m>
+      <z-m>0.6</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>-0.8</y-m>
+      <z-m>0.6</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>-0.8</y-m>
+      <z-m>0.6</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>-1.7</y-m>
+      <z-m>0.6</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>-1.7</y-m>
+      <z-m>0.6</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>-1.24</y-m>
+      <z-m>0.3</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>-1.24</y-m>
+      <z-m>0.3</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>-1.65</y-m>
+      <z-m>-0.03</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>-1.65</y-m>
+      <z-m>-0.03</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>-0.5</y-m>
+      <z-m>-0.06</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>-0.5</y-m>
+      <z-m>-0.06</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>0.3</y-m>
+      <z-m>-0.06</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>1.2</y-m>
+      <z-m>-0.06</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>0.3</y-m>
+      <z-m>-0.06</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>1.2</y-m>
+      <z-m>-0.06</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>2.2</y-m>
+      <z-m>-0.06</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>-1.97</x-m>
+      <y-m>2.75</y-m>
+      <z-m>-0.06</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>2.2</y-m>
+      <z-m>-0.06</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/small_gear.xml</path>
+    <offsets>
+      <x-m>1.97</x-m>
+      <y-m>2.75</y-m>
+      <z-m>-0.06</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+
+<!-- End Small Gears -->
+
+</PropertyList>

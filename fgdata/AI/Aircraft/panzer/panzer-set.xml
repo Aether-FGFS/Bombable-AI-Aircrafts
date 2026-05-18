@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Models/panzer.xml">
+
+  <model>
+    <path>AI/Aircraft/panzer/Models/panzer.xml</path>
+  </model>
+
+  <nasal>
+    <path>AI/Aircraft/T-34/Nasal/panzer-faction.nas</path>
+  </nasal>
+
+</PropertyList>

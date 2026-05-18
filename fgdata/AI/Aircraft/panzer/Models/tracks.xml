@@ -1,0 +1,39 @@
+<PropertyList>
+<path>tracks.ac</path>
+
+
+<!--        <animation>
+                <object-name>tracks</object-name>
+                <condition>
+                        <greater-than>
+                <property>velocities/airspeed-kt</property>
+                        <value>1</value>                        
+                        </greater-than>
+                </condition>
+                <type>textranslate</type>
+                <property>velocities/airspeed-kt</property>
+                <factor>50</factor>
+                <center>
+                        <x-m>-0.001</x-m>
+                        <y-m>-0.312</y-m>
+                        <z-m>0.400</z-m>
+                </center>
+                <axis>
+                        <x>-1</x>
+                        <y>0</y>
+                        <z>0</z>
+                </axis>
+        </animation>-->
+	<animation>
+		<type>textranslate</type>
+		<object-name>tracks</object-name>
+		<property alias="../../params/track" />
+		<factor>0.5</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+		</axis>
+	</animation>
+
+
+</PropertyList>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sound>
+    <path>Aircraft/B-17/Models/Effects/Weapons/bomb/bomb-sound.xml</path>
+  </sound>
+
+  <model>
+    <path>ExplosionFire.xml</path>
+  </model>
+
+  <model>
+    <path>ExplosionSmoke.xml</path>
+  </model>
+
+</PropertyList>

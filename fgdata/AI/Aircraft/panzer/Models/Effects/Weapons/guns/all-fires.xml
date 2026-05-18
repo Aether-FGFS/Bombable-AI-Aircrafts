@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <path>fire.xml</path>
+    <condition>
+      <!-- <property>sim/model/show-guns</property> -->
+      <property>sim/multiplay/generic/bool[7]</property>
+      <!-- <property>controls/armament/trigger</property> -->
+      <property>sim/multiplay/generic/int[10]</property>
+    </condition>
+    <offsets>
+      <x-m> -2.82395 </x-m>
+      <y-m> -2.08183 </y-m>
+      <z-m> -1.35628 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1 </x-offset>
+        <y-offset> 1 </y-offset>
+        <z-offset> 1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>fire.xml</path>
+    <condition>
+      <!-- <property>sim/model/show-guns</property> -->
+      <property>sim/multiplay/generic/bool[7]</property>
+      <!-- <property>controls/armament/trigger</property> -->
+      <property>sim/multiplay/generic/int[10]</property>
+    </condition>
+    <offsets>
+      <x-m> -2.82395 </x-m>
+      <y-m>  2.08183 </y-m>
+      <z-m> -1.35628 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1 </x-offset>
+        <y-offset> 1 </y-offset>
+        <z-offset> 1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+</PropertyList>

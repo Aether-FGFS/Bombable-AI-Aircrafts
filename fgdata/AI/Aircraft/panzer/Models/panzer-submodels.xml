@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- ============================================================
+       Panzer IV - Submodels
+       Kanón:    kláves "e"  →  sim/multiplay/generic/int[10]
+       Guľomet:  kláves "g"  →  sim/multiplay/generic/int[11]
+       ============================================================ -->
+
+  <!-- Shared cannon definition -->
+  <cannon>
+    <n>cannon</n>
+    <model>Aircraft/panzer/Models/Effects/Weapons/cannon/cannon-impact.xml</model>
+    <trigger>sim/multiplay/generic/int[10]</trigger>
+    <speed>800.0</speed>         <!-- 75mm KwK 40 L/43, ~800 m/s -->
+    <cd>0.193</cd>
+    <eda>0.00338158219</eda>
+    <weight>6.8</weight>         <!-- 75mm shell ~6.8 kg -->
+    <life>6</life>               <!-- dosah ~800m*6s = max dosah -->
+    <repeat>false</repeat>       <!-- kanón nie je automatický -->
+    <delay>0.1</delay>
+    <count>-1</count>
+    <wind>false</wind>
+    <collision>true</collision>
+    <impact>true</impact>
+    <collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/panzer/Models/Effects/Weapons/cannon/cannon-impact.xml</submodel-path>
+  </cannon>
+
+  <!-- Shared MG definition -->
+  <mg>
+    <n>gun</n>
+    <model>Aircraft/panzer/Models/Effects/Weapons/guns/12mm/apibullet-tracer.xml</model>
+    <trigger>sim/multiplay/generic/int[11]</trigger>
+    <speed>755.0</speed>         <!-- MG 34, ~755 m/s -->
+    <cd>0.193</cd>
+    <eda>0.00338158219</eda>
+    <weight>0.0117</weight>      <!-- 7.92mm ~11.7g -->
+    <life>3</life>
+    <repeat>true</repeat>
+    <delay>0.1</delay>
+    <count>-1</count>
+    <wind>false</wind>
+    <collision>true</collision>
+    <impact>true</impact>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/panzer/Models/Effects/Weapons/guns/12mm/12mm-submodel.xml</submodel-path>
+  </mg>
+
+  <!-- Kanón - jedna hlaveň, offset podľa blueprintu Pz.IV -->
+  <submodel>
+    <n>cannon</n>
+    <model            alias="../../cannon/model"/>
+    <trigger          alias="../../cannon/trigger"/>
+    <speed            alias="../../cannon/speed"/>
+    <cd               alias="../../cannon/cd"/>
+    <eda              alias="../../cannon/eda"/>
+    <weight           alias="../../cannon/weight"/>
+    <life             alias="../../cannon/life"/>
+    <repeat           alias="../../cannon/repeat"/>
+    <delay            alias="../../cannon/delay"/>
+    <count            alias="../../cannon/count"/>
+    <wind             alias="../../cannon/wind"/>
+    <collision        alias="../../cannon/collision"/>
+    <impact           alias="../../cannon/impact"/>
+    <collision-report alias="../../cannon/collision-report"/>
+    <impact-report    alias="../../cannon/impact-report"/>
+    <submodel-path    alias="../../cannon/submodel-path"/>
+    <offsets>
+      <x-m>3.8</x-m>
+      <y-m>0.0</y-m>
+      <z-m>2.05</z-m>
+      <heading-deg>sim/multiplay/generic/float[8]</heading-deg>
+      <pitch-deg>sim/multiplay/generic/float[9]</pitch-deg>
+    </offsets>
+    <turret-index>0</turret-index>
+  </submodel>
+
+  <!-- Guľomet MG34 -->
+  <submodel>
+    <n>gun</n>
+    <model            alias="../../mg/model"/>
+    <trigger          alias="../../mg/trigger"/>
+    <speed            alias="../../mg/speed"/>
+    <cd               alias="../../mg/cd"/>
+    <eda              alias="../../mg/eda"/>
+    <weight           alias="../../mg/weight"/>
+    <life             alias="../../mg/life"/>
+    <repeat           alias="../../mg/repeat"/>
+    <delay            alias="../../mg/delay"/>
+    <count            alias="../../mg/count"/>
+    <wind             alias="../../mg/wind"/>
+    <collision        alias="../../mg/collision"/>
+    <impact           alias="../../mg/impact"/>
+    <collision-report alias="../../mg/collision-report"/>
+    <impact-report    alias="../../mg/impact-report"/>
+    <submodel-path    alias="../../mg/submodel-path"/>
+    <offsets>
+      <x-m>2.0</x-m>
+      <y-m>0.5</y-m>
+      <z-m>1.7</z-m>
+      <heading-deg>sim/multiplay/generic/float[8]</heading-deg>
+      <pitch-deg>sim/multiplay/generic/float[9]</pitch-deg>
+    </offsets>
+    <turret-index>0</turret-index>
+  </submodel>
+
+  <!-- AA MG 34 - Fliegerabwehr mount on turret right side -->
+  <submodel>
+    <n>gun</n>
+    <model>Aircraft/panzer/Models/Effects/Weapons/guns/12mm/apibullet-tracer.xml</model>
+    <trigger>sim/multiplay/generic/int[12]</trigger>
+    <speed>755.0</speed>
+    <cd>0.193</cd>
+    <eda>0.00338158219</eda>
+    <weight>0.0117</weight>
+    <life>3</life>
+    <repeat>true</repeat>
+    <delay>0.08</delay>
+    <count>-1</count>
+    <wind>false</wind>
+    <collision>true</collision>
+    <impact>true</impact>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/panzer/Models/Effects/Weapons/guns/12mm/12mm-submodel.xml</submodel-path>
+    <offsets>
+      <x-m>0.5</x-m>     <!-- mierne vzadu od stredu veze -->
+      <y-m>-0.8</y-m>    <!-- vpravo - Fliegerabwehr pozicia -->
+      <z-m>3.2</z-m>     <!-- nad vezou -->
+      <heading-deg>sim/multiplay/generic/float[10]</heading-deg>
+      <pitch-deg>sim/multiplay/generic/float[11]</pitch-deg>
+    </offsets>
+  </submodel>
+
+</PropertyList>
