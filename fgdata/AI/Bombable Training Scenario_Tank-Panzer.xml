@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <scenario>
+   <description>Tank-panzer Bombable Training scenario.  Starts at KSFO! </description>
+		
+    <entry>
+      <search-order>PREFER_AI</search-order>
+      <type>ship</type>
+      <callsign>panzer</callsign>
+      <name>Tank-panzer-0</name>
+      <model type="string">Aircraft/panzer/Models/panzer.xml</model>
+      <latitude type="double">37.608200</latitude>
+      <longitude type="double">-122.2902</longitude>
+      <altitude>0.10</altitude>
+      <speed>8</speed>
+      <rudder type="double">0</rudder>
+      <heading type="double">110</heading>
+    </entry>
+
+    <entry>
+      <search-order>PREFER_AI</search-order>
+      <type>ship</type>
+      <callsign>panzer-1</callsign>
+      <name>Tank-panzer-1</name>
+      <model type="string">Aircraft/panzer/Models/panzer.xml</model>
+      <latitude type="double">37.608200</latitude>
+      <longitude type="double">-122.2902</longitude>
+      <altitude>0.10</altitude>
+      <speed>9</speed>
+      <rudder type="double">0</rudder>
+      <heading type="double">110</heading>
+    </entry>
+
+    <entry>
+      <search-order>PREFER_AI</search-order>
+      <type>ship</type>
+      <callsign>panzer-2</callsign>
+      <name>Tank-panzer-2</name>
+      <model type="string">Aircraft/panzer/Models/panzer.xml</model>
+      <latitude type="double">37.608200</latitude>
+      <longitude type="double">-122.2902</longitude>
+      <altitude>0.10</altitude>
+      <speed>10</speed>
+      <rudder type="double">0</rudder>
+      <heading type="double">110</heading>
+    </entry>
+
+    <entry>
+      <search-order>PREFER_AI</search-order>
+      <type>ship</type>
+      <callsign>panzer-3</callsign>
+      <name>Tank-panzer-3</name>
+      <model type="string">Aircraft/panzer/Models/panzer.xml</model>
+      <latitude type="double">37.608200</latitude>
+      <longitude type="double">-122.2902</longitude>
+      <altitude>0.10</altitude>
+      <speed>8</speed>
+      <rudder type="double">0</rudder>
+      <heading type="double">110</heading>
+    </entry>
+ </scenario>
+
+</PropertyList>
+
